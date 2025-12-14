@@ -1,0 +1,21 @@
+/* src/index.css */
+:root, html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Prevents scrollbars */
+  background-color: #f8fafc;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Force React Flow controls to be visible */
+.react-flow__controls {
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}

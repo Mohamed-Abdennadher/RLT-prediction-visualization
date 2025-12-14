@@ -1,0 +1,67 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.*
+
+# =========================
+# React (my-react-app)
+# =========================
+my-react-app/node_modules/
+my-react-app/build/
+my-react-app/dist/
+my-react-app/.cache/
+
+# React env files
+my-react-app/.env
+my-react-app/.env.*
+
+# =========================
+# General / OS
+# =========================
+.DS_Store
+Thumbs.db
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# Testing / Coverage
+# =========================
+.coverage
+htmlcov/
+.pytest_cache/
+
+# =========================
+# Misc
+# =========================
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
