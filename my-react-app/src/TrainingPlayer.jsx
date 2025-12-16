@@ -1,4 +1,33 @@
 /* eslint-disable react/prop-types */
+/**
+ * TrainingPlayer Component - Animated Training Process Viewer
+ * 
+ * The most complex component - shows the RLT tree building process step-by-step.
+ * Provides a "video player" style interface to scrub through the training history.
+ * 
+ * How it works:
+ * 1. Loads training_history.json containing sequential events
+ * 2. Replays events up to current step to build partial tree
+ * 3. Updates nodes based on event type (init, pilot, mute, split, leaf)
+ * 4. Animates camera to follow tree growth
+ * 
+ * Event Types:
+ * - NODE_INIT: New node created
+ * - PILOT_RUN: Random Forest runs, node highlights purple, shows importance chart
+ * - MUTE_VARS: Low-importance features excluded, red badges appear
+ * - SPLIT_DECISION: Final split determined, node shows "Feature ≤ threshold"
+ * - MAKE_LEAF: Node becomes terminal, shows prediction value
+ * 
+ * Features:
+ * - Play/Pause button for automatic playback
+ * - Slider to manually scrub through steps
+ * - Info panel showing current event details
+ * - Smooth camera animations following tree growth
+ * - Color-coded event badges
+ * 
+ * Props:
+ *   history: Array of event objects from Python training log
+ */
 import React, { useState, useEffect, useCallback } from 'react';
 import ReactFlow, { 
   useNodesState, 
@@ -134,6 +163,10 @@ const styles = {
   }
 };
 
+/**
+ * Maps event types to colors for visual consistency.
+ * Used in event badges and node highlighting.
+ */
 const getEventColor = (type) => {
     switch(type) {
         case 'NODE_INIT': return '#6b7280'; 
@@ -145,6 +178,10 @@ const getEventColor = (type) => {
     }
 };
 
+/**
+ * Layout function using Dagre to position nodes hierarchically.
+ * Same as RLTTree but with slightly different spacing.
+ */
 const getLayout = (nodes, edges) => {
   const dagreGraph = new dagre.graphlib.Graph();
   dagreGraph.setDefaultEdgeLabel(() => ({}));
@@ -184,6 +221,19 @@ function TrainingPlayerInner({ history }) {
   const { fitView } = useReactFlow();
 
   const renderStep = useCallback((stepIndex) => {
+    /**
+     * Replay all events from start up to stepIndex to reconstruct tree state.
+     * 
+     * This creates a "snapshot" of what the tree looked like at that moment
+     * in the training process by replaying all events sequentially.
+     * 
+     * For each event type, updates the corresponding node's data:
+     * - NODE_INIT: Create new node
+     * - PILOT_RUN: Add importance chart, highlight purple
+     * - MUTE_VARS: Add muted variable badges
+     * - SPLIT_DECISION: Update label with split info
+     * - MAKE_LEAF: Mark as leaf, add prediction
+     */
     if (!history || history.length === 0) return;
 
     let tempNodes = [];

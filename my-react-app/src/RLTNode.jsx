@@ -1,4 +1,25 @@
 /* eslint-disable react/prop-types */
+/**
+ * RLTNode Component
+ * 
+ * Custom React Flow node that displays information for a single node in the RLT tree.
+ * 
+ * What it shows:
+ * - Header: Node type (Split/Leaf), sample count, node type badge
+ * - Main label: 
+ *   - For split nodes: "Feature_X ≤ threshold"
+ *   - For leaf nodes: "🎯 Pred: value"
+ * - Pilot Importance Chart: Horizontal bar chart of top 5 most important features
+ * - Muted Variables: Red badges showing features excluded from this subtree
+ * 
+ * Props:
+ *   data.isLeaf: boolean - Whether this is a terminal node
+ *   data.label: string - Main display text
+ *   data.splitFeature: string - Feature name used for split
+ *   data.samples: number - Count of samples at this node
+ *   data.pilotData: array - Feature importance scores [{name, value}]
+ *   data.mutedVars: array - List of muted feature names
+ */
 import React, { memo } from 'react';
 import { Handle, Position } from 'reactflow';
 // 1. Remove ResponsiveContainer from imports

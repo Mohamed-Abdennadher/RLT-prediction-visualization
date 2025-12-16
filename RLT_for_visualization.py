@@ -21,6 +21,26 @@ warnings.filterwarnings("ignore")
 
 @dataclass
 class RLTNode:
+    """
+    Represents a single node in the Reinforcement Learning Tree.
+    
+    This node stores everything needed for:
+    - Making predictions (threshold, prediction value)
+    - Tree structure (left/right children)
+    - Visualization (pilot importances, muted variables)
+    
+    Attributes:
+        node_id: Unique identifier for this node
+        is_leaf: True if this is a terminal node (no children)
+        feature_indices: List of feature(s) used for splitting
+        threshold: Value to compare feature against (feature ≤ threshold goes left)
+        left: Left child node (samples where condition is True)
+        right: Right child node (samples where condition is False)
+        prediction: Final prediction value (only for leaf nodes)
+        n_samples: Number of training samples that reached this node
+        muted_vars: Features excluded from this subtree (low importance)
+        pilot_importances: Feature importance scores from embedded Random Forest
+    """
     node_id: int
     is_leaf: bool = False
     
@@ -45,12 +65,43 @@ class RLTNode:
 # ==============================================================================
 
 class RLTBuilder:
+    """
+    Builds individual Reinforcement Learning Trees.
+    
+    This is the heart of the RLT algorithm. It recursively constructs a decision tree
+    with the following key innovation:
+    
+    At each node, if reinforcement is enabled:
+    1. Run a small "pilot" Random Forest on current samples
+    2. Calculate feature importance scores
+    3. "Mute" (exclude) low-importance features from child nodes
+    4. Find best split using only remaining high-importance features
+    
+    This adaptive feature selection reduces overfitting and improves interpretability.
+    """
     def __init__(self, model_type, nmin, mtry, alpha,
                 nsplit, split_gen,
                 reinforcement, muting_rate, protect_n,
                 embed_config,       
                 leaf_embed_config,  
-                record_history=False): # NEW: Flag to enable/disable history logging
+                record_history=False):
+        """
+        Initialize the RLT tree builder.
+        
+        Args:
+            model_type: "regression" or "classification"
+            nmin: Minimum samples required to split a node (stopping criterion)
+            mtry: Number of features to consider for each split
+            alpha: Regularization parameter (not used in this version)
+            nsplit: Number of split points to try (not used in this version)
+            split_gen: Method for generating splits ("random")
+            reinforcement: If True, run pilot models and mute variables
+            muting_rate: Fraction of features to mute (e.g., 0.5 = mute bottom 50%)
+            protect_n: Number of top features to never mute
+            embed_config: Settings for pilot Random Forest {'ntrees': int, 'n_th': int}
+            leaf_embed_config: Settings for leaf models (not used in this version)
+            record_history: If True, log each step for visualization
+        """
         
         self.model_type = model_type
         self.nmin = nmin
@@ -72,12 +123,47 @@ class RLTBuilder:
         self.node_count = 0
 
     def fit(self, X, y, sample_indices):
+        """
+        Build the tree using the RLT algorithm.
+        
+        Args:
+            X: Feature matrix (n_samples, n_features)
+            y: Target values (n_samples,)
+            sample_indices: Which samples to use (for bootstrap sampling)
+            
+        Returns:
+            root: The root RLTNode of the built tree
+            history_log: List of events during tree construction (for visualization)
+        """
         self.history_log = [] # Reset history
         self.node_count = 0
         root = self._fit_recursive(X, y, sample_indices, muted_set=set(), depth=0, parent_id=None)
         return root, self.history_log
 
     def _fit_recursive(self, X, y, current_indices, muted_set, depth, parent_id):
+        """
+        Recursively build the tree using the RLT algorithm.
+        
+        This is where the magic happens! The algorithm flow:
+        
+        1. Initialize node and check stopping criteria
+        2. If reinforcement enabled and enough samples:
+           a. Run pilot Random Forest to get feature importances
+           b. Mute (exclude) low-importance features from child nodes
+        3. Find best split among remaining (non-muted) features
+        4. Recursively build left and right children with updated muted set
+        
+        Args:
+            X: Full feature matrix
+            y: Full target array
+            current_indices: Indices of samples at this node
+            muted_set: Features to exclude from splitting (from ancestor nodes)
+            depth: Current depth in tree (0 = root)
+            parent_id: ID of parent node (None for root)
+            
+        Returns:
+            RLTNode representing this subtree
+        """
         # 1. Setup Node
         my_id = self.node_count
         self.node_count += 1
@@ -104,6 +190,9 @@ class RLTBuilder:
             return self._make_leaf(y_curr, my_id, n_samples, muted_set)
 
         # 3. Reinforcement Logic (Pilot Model)
+        # This is the KEY INNOVATION of RLT:
+        # Run a small Random Forest to evaluate which features are most informative
+        # at this specific node, then mute (exclude) the least important ones.
         # --- SAFE LOOKUP: Use .get() ---
         n_th = self.embed_config.get('n_th', 10)
         run_reinforcement = self.reinforcement and (n_samples > n_th)
@@ -190,6 +279,20 @@ class RLTBuilder:
         return node
 
     def _find_split_random(self, X, y, candidates):
+        """
+        Find the best split point using random sampling.
+        
+        Tries random subset of features and random thresholds to find
+        the split that maximizes variance reduction (for regression).
+        
+        Args:
+            X: Feature matrix for current node samples
+            y: Target values for current node samples
+            candidates: List of feature indices to consider (non-muted)
+            
+        Returns:
+            (best_feature, best_threshold) or (None, None) if no valid split found
+        """
         """ Simplified random splitting for stability """
         best_gain = -np.inf
         best_f, best_t = None, None
@@ -245,6 +348,17 @@ class RLTBuilder:
 # ==============================================================================
 
 class RLT(BaseEstimator):
+    """
+    Reinforcement Learning Tree ensemble (like Random Forest with RLT).
+    
+    Builds multiple RLT trees and averages their predictions.
+    Compatible with scikit-learn API.
+    
+    Example:
+        model = RLT(ntrees=10, reinforcement=True, muting=0.5)
+        model.fit(X, y)
+        predictions = model.predict(X_test)  # Not implemented in this viz version
+    """
     def __init__(self, ntrees=10, reinforcement=False, muting=-1, nmin=5, embed_config=None):
         self.ntrees = ntrees
         self.reinforcement = reinforcement
@@ -293,6 +407,20 @@ class RLT(BaseEstimator):
 # ==============================================================================
 
 def export_static_tree(node, feature_names=None):
+    """
+    Convert RLTNode tree to React Flow compatible JSON format.
+    
+    Recursively walks the tree and creates two arrays:
+    - nodes: Each node's data (id, label, pilot importances, muted vars)
+    - edges: Connections between nodes (parent -> child)
+    
+    Args:
+        node: Root RLTNode to export
+        feature_names: Optional list of human-readable feature names
+        
+    Returns:
+        Dictionary with 'nodes' and 'edges' arrays ready for React Flow
+    """
     """ Exports the final structure for the Static Viewer """
     nodes_list = []
     edges_list = []
@@ -354,6 +482,16 @@ def export_static_tree(node, feature_names=None):
 # ==============================================================================
 
 if __name__ == "__main__":
+    """
+    Demo script that:
+    1. Generates synthetic regression data
+    2. Trains an RLT model with reinforcement learning
+    3. Exports the first tree to JSON files for React visualization
+    
+    Output files:
+    - tree_data.json: Final tree structure (for static viewer)
+    - training_history.json: Step-by-step build log (for animated player)
+    """
     print("1. 🎲 Generating Data...")
     X, y = make_regression(n_samples=300, n_features=15, n_informative=5, noise=0.1, random_state=42)
     feature_names = [f"Feature_{i}" for i in range(15)]
@@ -368,10 +506,10 @@ if __name__ == "__main__":
     
     print("3. 💾 Saving 'tree_data.json' (Static View)...")
     static_json = export_static_tree(first_tree, feature_names)
-    with open("sec/tree_data.json", "w") as f:
+    with open("tree_data.json", "w") as f:
         json.dump(static_json, f, indent=2)
         
-    print("4. 💾 Saving 'src/training_history.json' (Player View)...")
+    print("4. 💾 Saving 'training_history.json' (Player View)...")
     with open("training_history.json", "w") as f:
         json.dump(training_history, f, indent=2)
         
