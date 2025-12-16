@@ -1,4 +1,26 @@
 /* eslint-disable react/prop-types */
+/**
+ * RLTTree Component - Static Tree Viewer
+ * 
+ * Displays the complete RLT tree structure all at once.
+ * Uses React Flow for interactive pan/zoom and Dagre for automatic layout.
+ * 
+ * How it works:
+ * 1. Loads tree_data.json containing nodes and edges
+ * 2. Uses Dagre graph layout algorithm to position nodes top-to-bottom
+ * 3. Renders with React Flow library for interactivity
+ * 
+ * Features:
+ * - Pan and zoom controls
+ * - Minimap for navigation
+ * - Custom RLTNode components for each node
+ * - Automatic hierarchical layout
+ * 
+ * Props:
+ *   data: Object with shape { nodes: [], edges: [] }
+ *     - nodes: Array of node objects from Python export
+ *     - edges: Array of edge connections
+ */
 import React, { useEffect } from 'react';
 import ReactFlow, { 
   useNodesState, 
@@ -15,6 +37,16 @@ import RLTNode from './RLTNode';
 const nodeTypes = { rltNode: RLTNode };
 
 // --- LAYOUT ALGORITHM (Safe Version) ---
+/**
+ * Calculate node positions using Dagre graph layout algorithm.
+ * 
+ * Dagre automatically arranges nodes in a hierarchical tree structure
+ * to minimize edge crossings and maintain visual clarity.
+ * 
+ * @param {Array} nodes - React Flow nodes to layout
+ * @param {Array} edges - Connections between nodes
+ * @returns {Object} - { nodes: layoutedNodes, edges: originalEdges }
+ */
 const getLayoutedElements = (nodes, edges) => {
   // 1. Safety Check: If data is missing, stop immediately
   if (!nodes || nodes.length === 0) return { nodes: [], edges: [] };
