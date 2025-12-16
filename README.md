@@ -3,11 +3,24 @@
 ## 📖 Table of Contents
 1. [Overview](#overview)
 2. [What is RLT?](#what-is-rlt)
-3. [Project Structure](#project-structure)
-4. [Python Implementation](#python-implementation)
-5. [React Visualization](#react-visualization)
-6. [How It Works](#how-it-works)
-7. [Setup & Usage](#setup--usage)
+3. [Documentation](#documentation)
+4. [Project Structure](#project-structure)
+5. [Python Implementation](#python-implementation)
+6. [React Visualization](#react-visualization)
+7. [How It Works](#how-it-works)
+8. [Setup & Usage](#setup--usage)
+
+---
+
+## Documentation
+
+This repository includes comprehensive documentation:
+
+- **[QUICK_START.md](QUICK_START.md)** - Get up and running in 5 minutes
+- **[README.md](README.md)** - This file: Complete technical documentation (you are here)
+- **[ARCHITECTURE.md](ARCHITECTURE.md)** - System architecture, data flow, and algorithms
+
+**New to this project?** Start with [QUICK_START.md](QUICK_START.md)!
 
 ---
 
