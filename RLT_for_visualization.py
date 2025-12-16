@@ -506,10 +506,10 @@ if __name__ == "__main__":
     
     print("3. 💾 Saving 'tree_data.json' (Static View)...")
     static_json = export_static_tree(first_tree, feature_names)
-    with open("sec/tree_data.json", "w") as f:
+    with open("tree_data.json", "w") as f:
         json.dump(static_json, f, indent=2)
         
-    print("4. 💾 Saving 'src/training_history.json' (Player View)...")
+    print("4. 💾 Saving 'training_history.json' (Player View)...")
     with open("training_history.json", "w") as f:
         json.dump(training_history, f, indent=2)
         
