@@ -1,0 +1,6 @@
+Scenario,Pilot Strategy,Accuracy,Bal. Acc.,F1 (W),Precision,Recall,MCC,Time (s),param_split_gen,param_resample_prob,param_reinforcement,param_protect,param_pilot_model,param_nsplit,param_nmin,param_muting,param_mtry,param_combsplit,param_alpha
+Scenario 1 (Class),DECISION_TREE,0.535,0.5346,0.5341,0.5349,0.535,0.0695,26.6513,random,0.7,True,2,decision_tree,1,20,-1.0,5,2,0.05
+Scenario 1 (Class),ANN,0.525,0.5246,0.5242,0.5248,0.525,0.0494,376.9619,random,0.9,True,2,ann,1,20,-1.0,10,2,0.05
+Scenario 1 (Class),RANDOM_FOREST,0.5155,0.515,0.5142,0.5152,0.5155,0.0302,178.7492,random,0.9,True,3,random_forest,1,20,0.3,5,2,0.05
+Scenario 1 (Class),EXTRA_TREES,0.522,0.5218,0.5217,0.5219,0.522,0.0436,62.0657,random,0.9,True,2,extra_trees,1,50,-1.0,10,2,0.0
+Scenario 1 (Class),LINEAR,0.521,0.5206,0.5198,0.5208,0.521,0.0413,33.0519,random,0.9,True,2,linear,1,20,0.3,5,2,0.0

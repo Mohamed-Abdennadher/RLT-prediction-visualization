@@ -1,0 +1,16 @@
+Scenario,Pilot Strategy,R2,RMSE,MAE,MAPE (%),MedAE,Max Error,Time (s),param_split_gen,param_resample_prob,param_reinforcement,param_protect,param_pilot_model,param_nsplit,param_nmin,param_muting,param_mtry,param_combsplit,param_alpha
+Scenario 2,RANDOM_FOREST,0.845,1.4447,1.0728,937.79,0.8357,8.2422,117.7631,random,0.9,True,2,random_forest,1,20,-1.0,5,1,0.05
+Scenario 2,ANN,0.8431,1.4535,1.0847,899.6,0.86,7.8192,328.415,random,0.9,True,2,ann,1,20,-1.0,5,2,0.0
+Scenario 2,EXTRA_TREES,0.8411,1.4626,1.0911,908.1,0.86,7.7108,97.4486,random,0.9,True,2,extra_trees,1,20,-1.0,5,2,0.05
+Scenario 2,DECISION_TREE,0.8337,1.4962,1.0994,1218.94,0.8452,8.8225,13.4932,random,0.9,True,2,decision_tree,1,20,0.3,5,1,0.05
+Scenario 2,LINEAR,0.7433,1.859,1.3563,2147.86,1.0312,10.2738,13.6643,random,0.9,True,2,linear,1,20,0.3,10,1,0.0
+Scenario 3,ANN,0.5053,0.6712,0.5361,53.11,0.4667,1.6817,315.2322,random,0.9,True,2,ann,1,20,-1.0,10,2,0.05
+Scenario 3,DECISION_TREE,0.441,0.7135,0.5933,58.86,0.5582,1.7095,26.2586,random,0.9,True,2,decision_tree,1,20,0.3,10,2,0.0
+Scenario 3,RANDOM_FOREST,0.4452,0.7108,0.595,59.03,0.5737,1.6591,143.0821,random,0.9,True,2,random_forest,1,20,0.3,10,2,0.0
+Scenario 3,LINEAR,0.4327,0.7187,0.5953,59.06,0.5535,1.7693,27.4665,random,0.9,True,2,linear,1,20,0.3,5,2,0.0
+Scenario 3,EXTRA_TREES,0.4008,0.7387,0.6284,62.42,0.6282,1.6395,101.1383,random,0.9,True,3,extra_trees,1,20,0.3,5,2,0.05
+Scenario 4,ANN,0.7722,1.0413,0.8287,24.33,0.6892,3.4039,139.4187,random,0.9,True,2,ann,1,50,-1.0,10,1,0.05
+Scenario 4,DECISION_TREE,0.7719,1.042,0.8312,24.23,0.6967,3.4878,7.8803,random,0.7,True,2,decision_tree,1,50,-1.0,10,1,0.05
+Scenario 4,LINEAR,0.7716,1.0427,0.8329,24.22,0.6931,3.4268,8.2459,random,0.7,True,2,linear,1,50,-1.0,10,1,0.05
+Scenario 4,RANDOM_FOREST,0.7707,1.0448,0.8341,24.44,0.7063,3.3978,38.4979,random,0.7,True,3,random_forest,1,50,-1.0,10,1,0.05
+Scenario 4,EXTRA_TREES,0.7725,1.0406,0.8299,24.19,0.6908,3.5245,26.6939,random,0.7,True,2,extra_trees,1,50,-1.0,10,1,0.0
