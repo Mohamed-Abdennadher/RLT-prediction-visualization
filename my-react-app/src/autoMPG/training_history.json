@@ -1,0 +1,294 @@
+[
+  {
+    "step": 0,
+    "type": "NODE_INIT",
+    "nodeId": "0",
+    "parentId": null,
+    "depth": 0,
+    "samples": 286
+  },
+  {
+    "step": 1,
+    "type": "PILOT_RUN",
+    "nodeId": "0",
+    "pilotData": [
+      {
+        "name": "displacement",
+        "value": 0.3972952744606642
+      },
+      {
+        "name": "cylinders",
+        "value": 0.25158766633268737
+      },
+      {
+        "name": "horsepower",
+        "value": 0.14111217677169807
+      },
+      {
+        "name": "model_year",
+        "value": 0.090996871910269
+      },
+      {
+        "name": "weight",
+        "value": 0.0790305516884032
+      }
+    ]
+  },
+  {
+    "step": 2,
+    "type": "MUTE_VARS",
+    "nodeId": "0",
+    "mutedVars": [
+      "weight",
+      "acceleration",
+      "origin_1",
+      "origin_2",
+      "origin_3"
+    ]
+  },
+  {
+    "step": 3,
+    "type": "SPLIT_DECISION",
+    "nodeId": "0",
+    "label": "Thr: 0.30",
+    "splitFeature": "displacement"
+  },
+  {
+    "step": 4,
+    "type": "NODE_INIT",
+    "nodeId": "1",
+    "parentId": "0",
+    "depth": 1,
+    "samples": 174
+  },
+  {
+    "step": 5,
+    "type": "PILOT_RUN",
+    "nodeId": "1",
+    "pilotData": [
+      {
+        "name": "model_year",
+        "value": 0.3474459866743968
+      },
+      {
+        "name": "horsepower",
+        "value": 0.3263586314893716
+      },
+      {
+        "name": "displacement",
+        "value": 0.2587310945585355
+      },
+      {
+        "name": "cylinders",
+        "value": 0.06746428727769598
+      }
+    ]
+  },
+  {
+    "step": 6,
+    "type": "MUTE_VARS",
+    "nodeId": "1",
+    "mutedVars": [
+      "cylinders",
+      "displacement"
+    ]
+  },
+  {
+    "step": 7,
+    "type": "SPLIT_DECISION",
+    "nodeId": "1",
+    "label": "Thr: -0.85",
+    "splitFeature": "horsepower"
+  },
+  {
+    "step": 8,
+    "type": "NODE_INIT",
+    "nodeId": "2",
+    "parentId": "1",
+    "depth": 2,
+    "samples": 50
+  },
+  {
+    "step": 9,
+    "type": "MAKE_LEAF",
+    "nodeId": "2",
+    "label": "Pred: 31.71"
+  },
+  {
+    "step": 10,
+    "type": "NODE_INIT",
+    "nodeId": "3",
+    "parentId": "1",
+    "depth": 2,
+    "samples": 124
+  },
+  {
+    "step": 11,
+    "type": "PILOT_RUN",
+    "nodeId": "3",
+    "pilotData": [
+      {
+        "name": "model_year",
+        "value": 0.544099920586459
+      },
+      {
+        "name": "horsepower",
+        "value": 0.45590007941354105
+      }
+    ]
+  },
+  {
+    "step": 12,
+    "type": "SPLIT_DECISION",
+    "nodeId": "3",
+    "label": "Thr: 80.00",
+    "splitFeature": "model_year"
+  },
+  {
+    "step": 13,
+    "type": "NODE_INIT",
+    "nodeId": "4",
+    "parentId": "3",
+    "depth": 3,
+    "samples": 98
+  },
+  {
+    "step": 14,
+    "type": "PILOT_RUN",
+    "nodeId": "4",
+    "pilotData": [
+      {
+        "name": "horsepower",
+        "value": 0.5732819519236123
+      },
+      {
+        "name": "model_year",
+        "value": 0.4267180480763877
+      }
+    ]
+  },
+  {
+    "step": 15,
+    "type": "MAKE_LEAF",
+    "nodeId": "4",
+    "label": "Pred: 24.89"
+  },
+  {
+    "step": 16,
+    "type": "NODE_INIT",
+    "nodeId": "5",
+    "parentId": "3",
+    "depth": 3,
+    "samples": 26
+  },
+  {
+    "step": 17,
+    "type": "MAKE_LEAF",
+    "nodeId": "5",
+    "label": "Pred: 30.21"
+  },
+  {
+    "step": 18,
+    "type": "NODE_INIT",
+    "nodeId": "6",
+    "parentId": "0",
+    "depth": 1,
+    "samples": 112
+  },
+  {
+    "step": 19,
+    "type": "PILOT_RUN",
+    "nodeId": "6",
+    "pilotData": [
+      {
+        "name": "horsepower",
+        "value": 0.33266910018473717
+      },
+      {
+        "name": "model_year",
+        "value": 0.32291281196488897
+      },
+      {
+        "name": "displacement",
+        "value": 0.2982220585112918
+      },
+      {
+        "name": "cylinders",
+        "value": 0.046196029339082116
+      }
+    ]
+  },
+  {
+    "step": 20,
+    "type": "MUTE_VARS",
+    "nodeId": "6",
+    "mutedVars": [
+      "cylinders",
+      "displacement"
+    ]
+  },
+  {
+    "step": 21,
+    "type": "SPLIT_DECISION",
+    "nodeId": "6",
+    "label": "Thr: 0.65",
+    "splitFeature": "horsepower"
+  },
+  {
+    "step": 22,
+    "type": "NODE_INIT",
+    "nodeId": "7",
+    "parentId": "6",
+    "depth": 2,
+    "samples": 43
+  },
+  {
+    "step": 23,
+    "type": "MAKE_LEAF",
+    "nodeId": "7",
+    "label": "Pred: 18.45"
+  },
+  {
+    "step": 24,
+    "type": "NODE_INIT",
+    "nodeId": "8",
+    "parentId": "6",
+    "depth": 2,
+    "samples": 69
+  },
+  {
+    "step": 25,
+    "type": "SPLIT_DECISION",
+    "nodeId": "8",
+    "label": "Thr: 74.00",
+    "splitFeature": "model_year"
+  },
+  {
+    "step": 26,
+    "type": "NODE_INIT",
+    "nodeId": "9",
+    "parentId": "8",
+    "depth": 3,
+    "samples": 41
+  },
+  {
+    "step": 27,
+    "type": "MAKE_LEAF",
+    "nodeId": "9",
+    "label": "Pred: 13.59"
+  },
+  {
+    "step": 28,
+    "type": "NODE_INIT",
+    "nodeId": "10",
+    "parentId": "8",
+    "depth": 3,
+    "samples": 28
+  },
+  {
+    "step": 29,
+    "type": "MAKE_LEAF",
+    "nodeId": "10",
+    "label": "Pred: 16.14"
+  }
+]

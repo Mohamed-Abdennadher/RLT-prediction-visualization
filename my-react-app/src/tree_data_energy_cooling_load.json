@@ -1,0 +1,685 @@
+{
+  "nodes": [
+    {
+      "id": "0",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": false,
+        "label": "Thr: -1.00",
+        "splitFeature": "Overall_Height",
+        "samples": 552,
+        "pilotData": [
+          {
+            "name": "Relative_Compactness",
+            "value": 0.32566263119137034
+          },
+          {
+            "name": "Overall_Height",
+            "value": 0.2559926539564678
+          },
+          {
+            "name": "Surface_Area",
+            "value": 0.2213086908823975
+          },
+          {
+            "name": "Roof_Area",
+            "value": 0.1219310920339625
+          },
+          {
+            "name": "Wall_Area",
+            "value": 0.04219399741135375
+          }
+        ],
+        "mutedVars": []
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "1",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": false,
+        "label": "Thr: -0.99",
+        "splitFeature": "Relative_Compactness",
+        "samples": 287,
+        "pilotData": [
+          {
+            "name": "Relative_Compactness",
+            "value": 0.5471558039715897
+          },
+          {
+            "name": "Surface_Area",
+            "value": 0.4528441960284104
+          },
+          {
+            "name": "Roof_Area",
+            "value": 0.0
+          },
+          {
+            "name": "Overall_Height",
+            "value": 0.0
+          }
+        ],
+        "mutedVars": [
+          "Wall_Area",
+          "Orientation",
+          "Glazing_Area",
+          "Glazing_Area_Distribution"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "2",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": false,
+        "label": "Thr: 1.00",
+        "splitFeature": "Surface_Area",
+        "samples": 147,
+        "pilotData": [
+          {
+            "name": "Surface_Area",
+            "value": 0.5275311882989819
+          },
+          {
+            "name": "Relative_Compactness",
+            "value": 0.4724688117010181
+          }
+        ],
+        "mutedVars": [
+          "Wall_Area",
+          "Roof_Area",
+          "Overall_Height",
+          "Orientation",
+          "Glazing_Area",
+          "Glazing_Area_Distribution"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "3",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": true,
+        "label": "Pred: 16.05\n(Ridge)",
+        "splitFeature": "",
+        "samples": 41,
+        "pilotData": [],
+        "mutedVars": [
+          "Wall_Area",
+          "Roof_Area",
+          "Overall_Height",
+          "Orientation",
+          "Glazing_Area",
+          "Glazing_Area_Distribution"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "4",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": true,
+        "label": "Pred: 17.27\n(Ridge)",
+        "splitFeature": "",
+        "samples": 106,
+        "pilotData": [],
+        "mutedVars": [
+          "Wall_Area",
+          "Roof_Area",
+          "Overall_Height",
+          "Orientation",
+          "Glazing_Area",
+          "Glazing_Area_Distribution"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "5",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": false,
+        "label": "Thr: -0.51",
+        "splitFeature": "Relative_Compactness",
+        "samples": 140,
+        "pilotData": [
+          {
+            "name": "Relative_Compactness",
+            "value": 0.529302356275842
+          },
+          {
+            "name": "Surface_Area",
+            "value": 0.47069764372415807
+          }
+        ],
+        "mutedVars": [
+          "Wall_Area",
+          "Roof_Area",
+          "Overall_Height",
+          "Orientation",
+          "Glazing_Area",
+          "Glazing_Area_Distribution"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "6",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": true,
+        "label": "Pred: 15.15\n(Ridge)",
+        "splitFeature": "",
+        "samples": 103,
+        "pilotData": [],
+        "mutedVars": [
+          "Wall_Area",
+          "Roof_Area",
+          "Overall_Height",
+          "Orientation",
+          "Glazing_Area",
+          "Glazing_Area_Distribution"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "7",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": true,
+        "label": "Pred: 14.97\n(Ridge)",
+        "splitFeature": "",
+        "samples": 37,
+        "pilotData": [],
+        "mutedVars": [
+          "Wall_Area",
+          "Roof_Area",
+          "Overall_Height",
+          "Orientation",
+          "Glazing_Area",
+          "Glazing_Area_Distribution"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "8",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": false,
+        "label": "Thr: 0.53",
+        "splitFeature": "Relative_Compactness",
+        "samples": 265,
+        "pilotData": [
+          {
+            "name": "Surface_Area",
+            "value": 0.5170309110285447
+          },
+          {
+            "name": "Relative_Compactness",
+            "value": 0.4011084659875703
+          },
+          {
+            "name": "Roof_Area",
+            "value": 0.08186062298388494
+          },
+          {
+            "name": "Overall_Height",
+            "value": 0.0
+          }
+        ],
+        "mutedVars": [
+          "Wall_Area",
+          "Orientation",
+          "Glazing_Area",
+          "Glazing_Area_Distribution"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "9",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": false,
+        "label": "Thr: -0.04",
+        "splitFeature": "Relative_Compactness",
+        "samples": 125,
+        "pilotData": [
+          {
+            "name": "Surface_Area",
+            "value": 0.5634219843745535
+          },
+          {
+            "name": "Relative_Compactness",
+            "value": 0.43657801562544646
+          }
+        ],
+        "mutedVars": [
+          "Wall_Area",
+          "Roof_Area",
+          "Overall_Height",
+          "Orientation",
+          "Glazing_Area",
+          "Glazing_Area_Distribution"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "10",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": true,
+        "label": "Pred: 36.49\n(Ridge)",
+        "splitFeature": "",
+        "samples": 36,
+        "pilotData": [],
+        "mutedVars": [
+          "Wall_Area",
+          "Roof_Area",
+          "Overall_Height",
+          "Orientation",
+          "Glazing_Area",
+          "Glazing_Area_Distribution"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "11",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": false,
+        "label": "Thr: -0.67",
+        "splitFeature": "Surface_Area",
+        "samples": 89,
+        "pilotData": [
+          {
+            "name": "Surface_Area",
+            "value": 0.52
+          },
+          {
+            "name": "Relative_Compactness",
+            "value": 0.48
+          }
+        ],
+        "mutedVars": [
+          "Wall_Area",
+          "Roof_Area",
+          "Overall_Height",
+          "Orientation",
+          "Glazing_Area",
+          "Glazing_Area_Distribution"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "12",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": true,
+        "label": "Pred: 27.65\n(Ridge)",
+        "splitFeature": "",
+        "samples": 46,
+        "pilotData": [],
+        "mutedVars": [
+          "Wall_Area",
+          "Roof_Area",
+          "Overall_Height",
+          "Orientation",
+          "Glazing_Area",
+          "Glazing_Area_Distribution"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "13",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": true,
+        "label": "Pred: 41.14\n(Ridge)",
+        "splitFeature": "",
+        "samples": 43,
+        "pilotData": [],
+        "mutedVars": [
+          "Wall_Area",
+          "Roof_Area",
+          "Overall_Height",
+          "Orientation",
+          "Glazing_Area",
+          "Glazing_Area_Distribution"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "14",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": false,
+        "label": "Thr: 1.28",
+        "splitFeature": "Relative_Compactness",
+        "samples": 140,
+        "pilotData": [
+          {
+            "name": "Surface_Area",
+            "value": 0.5405859494261214
+          },
+          {
+            "name": "Relative_Compactness",
+            "value": 0.4594140505738787
+          }
+        ],
+        "mutedVars": [
+          "Wall_Area",
+          "Roof_Area",
+          "Overall_Height",
+          "Orientation",
+          "Glazing_Area",
+          "Glazing_Area_Distribution"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "15",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": false,
+        "label": "Thr: 0.91",
+        "splitFeature": "Relative_Compactness",
+        "samples": 97,
+        "pilotData": [
+          {
+            "name": "Relative_Compactness",
+            "value": 0.52
+          },
+          {
+            "name": "Surface_Area",
+            "value": 0.48
+          }
+        ],
+        "mutedVars": [
+          "Wall_Area",
+          "Roof_Area",
+          "Overall_Height",
+          "Orientation",
+          "Glazing_Area",
+          "Glazing_Area_Distribution"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "16",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": true,
+        "label": "Pred: 30.35\n(Ridge)",
+        "splitFeature": "",
+        "samples": 42,
+        "pilotData": [],
+        "mutedVars": [
+          "Wall_Area",
+          "Roof_Area",
+          "Overall_Height",
+          "Orientation",
+          "Glazing_Area",
+          "Glazing_Area_Distribution"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "17",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": true,
+        "label": "Pred: 32.97\n(Ridge)",
+        "splitFeature": "",
+        "samples": 55,
+        "pilotData": [],
+        "mutedVars": [
+          "Wall_Area",
+          "Roof_Area",
+          "Overall_Height",
+          "Orientation",
+          "Glazing_Area",
+          "Glazing_Area_Distribution"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "18",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": true,
+        "label": "Pred: 28.41\n(Ridge)",
+        "splitFeature": "",
+        "samples": 43,
+        "pilotData": [],
+        "mutedVars": [
+          "Wall_Area",
+          "Roof_Area",
+          "Overall_Height",
+          "Orientation",
+          "Glazing_Area",
+          "Glazing_Area_Distribution"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0-1",
+      "source": "0",
+      "target": "1",
+      "label": "True",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e1-2",
+      "source": "1",
+      "target": "2",
+      "label": "True",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e2-3",
+      "source": "2",
+      "target": "3",
+      "label": "True",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e2-4",
+      "source": "2",
+      "target": "4",
+      "label": "False",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e1-5",
+      "source": "1",
+      "target": "5",
+      "label": "False",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e5-6",
+      "source": "5",
+      "target": "6",
+      "label": "True",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e5-7",
+      "source": "5",
+      "target": "7",
+      "label": "False",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e0-8",
+      "source": "0",
+      "target": "8",
+      "label": "False",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e8-9",
+      "source": "8",
+      "target": "9",
+      "label": "True",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e9-10",
+      "source": "9",
+      "target": "10",
+      "label": "True",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e9-11",
+      "source": "9",
+      "target": "11",
+      "label": "False",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e11-12",
+      "source": "11",
+      "target": "12",
+      "label": "True",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e11-13",
+      "source": "11",
+      "target": "13",
+      "label": "False",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e8-14",
+      "source": "8",
+      "target": "14",
+      "label": "False",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e14-15",
+      "source": "14",
+      "target": "15",
+      "label": "True",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e15-16",
+      "source": "15",
+      "target": "16",
+      "label": "True",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e15-17",
+      "source": "15",
+      "target": "17",
+      "label": "False",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e14-18",
+      "source": "14",
+      "target": "18",
+      "label": "False",
+      "type": "smoothstep",
+      "animated": true
+    }
+  ]
+}

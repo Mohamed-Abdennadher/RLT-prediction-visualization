@@ -1,0 +1,455 @@
+{
+  "nodes": [
+    {
+      "id": "0",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": false,
+        "label": "Thr: -0.56",
+        "splitFeature": "water",
+        "samples": 741,
+        "pilotData": [
+          {
+            "name": "age",
+            "value": 0.2664132638923263
+          },
+          {
+            "name": "cement",
+            "value": 0.24993299801570465
+          },
+          {
+            "name": "water",
+            "value": 0.15001455139482092
+          },
+          {
+            "name": "superplasticizer",
+            "value": 0.12145149546560188
+          },
+          {
+            "name": "fly_ash",
+            "value": 0.072443524044076
+          }
+        ],
+        "mutedVars": []
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "1",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": true,
+        "label": "Pred: 44.29\n(Ridge)",
+        "splitFeature": "",
+        "samples": 219,
+        "pilotData": [],
+        "mutedVars": [
+          "blast_furnace_slag",
+          "fly_ash",
+          "coarse_aggregate",
+          "fine_aggregate"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "2",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": false,
+        "label": "Thr: -0.61",
+        "splitFeature": "age",
+        "samples": 522,
+        "pilotData": [
+          {
+            "name": "age",
+            "value": 0.4902190404515828
+          },
+          {
+            "name": "cement",
+            "value": 0.3662789326637256
+          },
+          {
+            "name": "water",
+            "value": 0.09941528549727527
+          },
+          {
+            "name": "superplasticizer",
+            "value": 0.04408674138741642
+          }
+        ],
+        "mutedVars": [
+          "blast_furnace_slag",
+          "fly_ash",
+          "coarse_aggregate",
+          "fine_aggregate"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "3",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": true,
+        "label": "Pred: 19.08\n(Ridge)",
+        "splitFeature": "",
+        "samples": 137,
+        "pilotData": [],
+        "mutedVars": [
+          "blast_furnace_slag",
+          "fly_ash",
+          "water",
+          "superplasticizer",
+          "coarse_aggregate",
+          "fine_aggregate"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "4",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": false,
+        "label": "Thr: -0.42",
+        "splitFeature": "cement",
+        "samples": 385,
+        "pilotData": [
+          {
+            "name": "cement",
+            "value": 0.6382995333912116
+          },
+          {
+            "name": "age",
+            "value": 0.36170046660878846
+          }
+        ],
+        "mutedVars": [
+          "blast_furnace_slag",
+          "fly_ash",
+          "water",
+          "superplasticizer",
+          "coarse_aggregate",
+          "fine_aggregate"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "5",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": false,
+        "label": "Thr: -0.99",
+        "splitFeature": "cement",
+        "samples": 162,
+        "pilotData": [
+          {
+            "name": "cement",
+            "value": 0.5161778889384737
+          },
+          {
+            "name": "age",
+            "value": 0.48382211106152634
+          }
+        ],
+        "mutedVars": [
+          "blast_furnace_slag",
+          "fly_ash",
+          "water",
+          "superplasticizer",
+          "coarse_aggregate",
+          "fine_aggregate"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "6",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": false,
+        "label": "Thr: -1.24",
+        "splitFeature": "cement",
+        "samples": 104,
+        "pilotData": [
+          {
+            "name": "cement",
+            "value": 0.6356303698711805
+          },
+          {
+            "name": "age",
+            "value": 0.3643696301288195
+          }
+        ],
+        "mutedVars": [
+          "blast_furnace_slag",
+          "fly_ash",
+          "water",
+          "superplasticizer",
+          "coarse_aggregate",
+          "fine_aggregate"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "7",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": true,
+        "label": "Pred: 26.32\n(Ridge)",
+        "splitFeature": "",
+        "samples": 47,
+        "pilotData": [],
+        "mutedVars": [
+          "blast_furnace_slag",
+          "fly_ash",
+          "water",
+          "superplasticizer",
+          "coarse_aggregate",
+          "fine_aggregate"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "8",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": false,
+        "label": "Thr: -1.19",
+        "splitFeature": "cement",
+        "samples": 57,
+        "pilotData": [],
+        "mutedVars": [
+          "blast_furnace_slag",
+          "fly_ash",
+          "water",
+          "superplasticizer",
+          "coarse_aggregate",
+          "fine_aggregate"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "9",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": true,
+        "label": "Pred: 20.30\n(Ridge)",
+        "splitFeature": "",
+        "samples": 23,
+        "pilotData": [],
+        "mutedVars": [
+          "blast_furnace_slag",
+          "fly_ash",
+          "water",
+          "superplasticizer",
+          "coarse_aggregate",
+          "fine_aggregate"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "10",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": true,
+        "label": "Pred: 35.91\n(Ridge)",
+        "splitFeature": "",
+        "samples": 34,
+        "pilotData": [],
+        "mutedVars": [
+          "blast_furnace_slag",
+          "fly_ash",
+          "water",
+          "superplasticizer",
+          "coarse_aggregate",
+          "fine_aggregate"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "11",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": true,
+        "label": "Pred: 32.78\n(Ridge)",
+        "splitFeature": "",
+        "samples": 58,
+        "pilotData": [],
+        "mutedVars": [
+          "blast_furnace_slag",
+          "fly_ash",
+          "water",
+          "superplasticizer",
+          "coarse_aggregate",
+          "fine_aggregate"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "12",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": true,
+        "label": "Pred: 42.25\n(Ridge)",
+        "splitFeature": "",
+        "samples": 223,
+        "pilotData": [],
+        "mutedVars": [
+          "blast_furnace_slag",
+          "fly_ash",
+          "water",
+          "superplasticizer",
+          "coarse_aggregate",
+          "fine_aggregate"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0-1",
+      "source": "0",
+      "target": "1",
+      "label": "True",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e0-2",
+      "source": "0",
+      "target": "2",
+      "label": "False",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e2-3",
+      "source": "2",
+      "target": "3",
+      "label": "True",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e2-4",
+      "source": "2",
+      "target": "4",
+      "label": "False",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e4-5",
+      "source": "4",
+      "target": "5",
+      "label": "True",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e5-6",
+      "source": "5",
+      "target": "6",
+      "label": "True",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e6-7",
+      "source": "6",
+      "target": "7",
+      "label": "True",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e6-8",
+      "source": "6",
+      "target": "8",
+      "label": "False",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e8-9",
+      "source": "8",
+      "target": "9",
+      "label": "True",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e8-10",
+      "source": "8",
+      "target": "10",
+      "label": "False",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e5-11",
+      "source": "5",
+      "target": "11",
+      "label": "False",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e4-12",
+      "source": "4",
+      "target": "12",
+      "label": "False",
+      "type": "smoothstep",
+      "animated": true
+    }
+  ]
+}

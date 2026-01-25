@@ -1,0 +1,402 @@
+{
+  "nodes": [
+    {
+      "id": "0",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": false,
+        "label": "Thr: 0.30",
+        "splitFeature": "displacement",
+        "samples": 286,
+        "pilotData": [
+          {
+            "name": "displacement",
+            "value": 0.3972952744606642
+          },
+          {
+            "name": "cylinders",
+            "value": 0.25158766633268737
+          },
+          {
+            "name": "horsepower",
+            "value": 0.14111217677169807
+          },
+          {
+            "name": "model_year",
+            "value": 0.090996871910269
+          },
+          {
+            "name": "weight",
+            "value": 0.0790305516884032
+          }
+        ],
+        "mutedVars": []
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "1",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": false,
+        "label": "Thr: -0.85",
+        "splitFeature": "horsepower",
+        "samples": 174,
+        "pilotData": [
+          {
+            "name": "model_year",
+            "value": 0.3474459866743968
+          },
+          {
+            "name": "horsepower",
+            "value": 0.3263586314893716
+          },
+          {
+            "name": "displacement",
+            "value": 0.2587310945585355
+          },
+          {
+            "name": "cylinders",
+            "value": 0.06746428727769598
+          }
+        ],
+        "mutedVars": [
+          "weight",
+          "acceleration",
+          "origin_1",
+          "origin_2",
+          "origin_3"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "2",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": true,
+        "label": "Pred: 31.71\n(Ridge)",
+        "splitFeature": "",
+        "samples": 50,
+        "pilotData": [],
+        "mutedVars": [
+          "cylinders",
+          "displacement",
+          "weight",
+          "acceleration",
+          "origin_1",
+          "origin_2",
+          "origin_3"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "3",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": false,
+        "label": "Thr: 80.00",
+        "splitFeature": "model_year",
+        "samples": 124,
+        "pilotData": [
+          {
+            "name": "model_year",
+            "value": 0.544099920586459
+          },
+          {
+            "name": "horsepower",
+            "value": 0.45590007941354105
+          }
+        ],
+        "mutedVars": [
+          "cylinders",
+          "displacement",
+          "weight",
+          "acceleration",
+          "origin_1",
+          "origin_2",
+          "origin_3"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "4",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": true,
+        "label": "Pred: 24.89\n(Ridge)",
+        "splitFeature": "",
+        "samples": 98,
+        "pilotData": [],
+        "mutedVars": [
+          "cylinders",
+          "displacement",
+          "weight",
+          "acceleration",
+          "origin_1",
+          "origin_2",
+          "origin_3"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "5",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": true,
+        "label": "Pred: 30.21\n(Ridge)",
+        "splitFeature": "",
+        "samples": 26,
+        "pilotData": [],
+        "mutedVars": [
+          "cylinders",
+          "displacement",
+          "weight",
+          "acceleration",
+          "origin_1",
+          "origin_2",
+          "origin_3"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "6",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": false,
+        "label": "Thr: 0.65",
+        "splitFeature": "horsepower",
+        "samples": 112,
+        "pilotData": [
+          {
+            "name": "horsepower",
+            "value": 0.33266910018473717
+          },
+          {
+            "name": "model_year",
+            "value": 0.32291281196488897
+          },
+          {
+            "name": "displacement",
+            "value": 0.2982220585112918
+          },
+          {
+            "name": "cylinders",
+            "value": 0.046196029339082116
+          }
+        ],
+        "mutedVars": [
+          "weight",
+          "acceleration",
+          "origin_1",
+          "origin_2",
+          "origin_3"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "7",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": true,
+        "label": "Pred: 18.45\n(Ridge)",
+        "splitFeature": "",
+        "samples": 43,
+        "pilotData": [],
+        "mutedVars": [
+          "cylinders",
+          "displacement",
+          "weight",
+          "acceleration",
+          "origin_1",
+          "origin_2",
+          "origin_3"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "8",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": false,
+        "label": "Thr: 74.00",
+        "splitFeature": "model_year",
+        "samples": 69,
+        "pilotData": [],
+        "mutedVars": [
+          "cylinders",
+          "displacement",
+          "weight",
+          "acceleration",
+          "origin_1",
+          "origin_2",
+          "origin_3"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "9",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": true,
+        "label": "Pred: 13.59\n(Ridge)",
+        "splitFeature": "",
+        "samples": 41,
+        "pilotData": [],
+        "mutedVars": [
+          "cylinders",
+          "displacement",
+          "weight",
+          "acceleration",
+          "origin_1",
+          "origin_2",
+          "origin_3"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "10",
+      "type": "rltNode",
+      "data": {
+        "isLeaf": true,
+        "label": "Pred: 16.14\n(Ridge)",
+        "splitFeature": "",
+        "samples": 28,
+        "pilotData": [],
+        "mutedVars": [
+          "cylinders",
+          "displacement",
+          "weight",
+          "acceleration",
+          "origin_1",
+          "origin_2",
+          "origin_3"
+        ]
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0-1",
+      "source": "0",
+      "target": "1",
+      "label": "True",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e1-2",
+      "source": "1",
+      "target": "2",
+      "label": "True",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e1-3",
+      "source": "1",
+      "target": "3",
+      "label": "False",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e3-4",
+      "source": "3",
+      "target": "4",
+      "label": "True",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e3-5",
+      "source": "3",
+      "target": "5",
+      "label": "False",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e0-6",
+      "source": "0",
+      "target": "6",
+      "label": "False",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e6-7",
+      "source": "6",
+      "target": "7",
+      "label": "True",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e6-8",
+      "source": "6",
+      "target": "8",
+      "label": "False",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e8-9",
+      "source": "8",
+      "target": "9",
+      "label": "True",
+      "type": "smoothstep",
+      "animated": true
+    },
+    {
+      "id": "e8-10",
+      "source": "8",
+      "target": "10",
+      "label": "False",
+      "type": "smoothstep",
+      "animated": true
+    }
+  ]
+}

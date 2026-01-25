@@ -1,0 +1,367 @@
+[
+  {
+    "step": 0,
+    "type": "NODE_INIT",
+    "nodeId": "0",
+    "parentId": null,
+    "depth": 0,
+    "samples": 741
+  },
+  {
+    "step": 1,
+    "type": "PILOT_RUN",
+    "nodeId": "0",
+    "pilotData": [
+      {
+        "name": "age",
+        "value": 0.2664132638923263
+      },
+      {
+        "name": "cement",
+        "value": 0.24993299801570465
+      },
+      {
+        "name": "water",
+        "value": 0.15001455139482092
+      },
+      {
+        "name": "superplasticizer",
+        "value": 0.12145149546560188
+      },
+      {
+        "name": "fly_ash",
+        "value": 0.072443524044076
+      }
+    ]
+  },
+  {
+    "step": 2,
+    "type": "MUTE_VARS",
+    "nodeId": "0",
+    "mutedVars": [
+      "blast_furnace_slag",
+      "fly_ash",
+      "coarse_aggregate",
+      "fine_aggregate"
+    ]
+  },
+  {
+    "step": 3,
+    "type": "SPLIT_DECISION",
+    "nodeId": "0",
+    "label": "Thr: -0.56",
+    "splitFeature": "water"
+  },
+  {
+    "step": 4,
+    "type": "NODE_INIT",
+    "nodeId": "1",
+    "parentId": "0",
+    "depth": 1,
+    "samples": 219
+  },
+  {
+    "step": 5,
+    "type": "PILOT_RUN",
+    "nodeId": "1",
+    "pilotData": [
+      {
+        "name": "cement",
+        "value": 0.5098057832941223
+      },
+      {
+        "name": "age",
+        "value": 0.32365020511543646
+      },
+      {
+        "name": "superplasticizer",
+        "value": 0.08849565025092568
+      },
+      {
+        "name": "water",
+        "value": 0.07804836133951562
+      }
+    ]
+  },
+  {
+    "step": 6,
+    "type": "MUTE_VARS",
+    "nodeId": "1",
+    "mutedVars": [
+      "water",
+      "superplasticizer"
+    ]
+  },
+  {
+    "step": 7,
+    "type": "MAKE_LEAF",
+    "nodeId": "1",
+    "label": "Pred: 44.29"
+  },
+  {
+    "step": 8,
+    "type": "NODE_INIT",
+    "nodeId": "2",
+    "parentId": "0",
+    "depth": 1,
+    "samples": 522
+  },
+  {
+    "step": 9,
+    "type": "PILOT_RUN",
+    "nodeId": "2",
+    "pilotData": [
+      {
+        "name": "age",
+        "value": 0.4902190404515828
+      },
+      {
+        "name": "cement",
+        "value": 0.3662789326637256
+      },
+      {
+        "name": "water",
+        "value": 0.09941528549727527
+      },
+      {
+        "name": "superplasticizer",
+        "value": 0.04408674138741642
+      }
+    ]
+  },
+  {
+    "step": 10,
+    "type": "MUTE_VARS",
+    "nodeId": "2",
+    "mutedVars": [
+      "water",
+      "superplasticizer"
+    ]
+  },
+  {
+    "step": 11,
+    "type": "SPLIT_DECISION",
+    "nodeId": "2",
+    "label": "Thr: -0.61",
+    "splitFeature": "age"
+  },
+  {
+    "step": 12,
+    "type": "NODE_INIT",
+    "nodeId": "3",
+    "parentId": "2",
+    "depth": 2,
+    "samples": 137
+  },
+  {
+    "step": 13,
+    "type": "PILOT_RUN",
+    "nodeId": "3",
+    "pilotData": [
+      {
+        "name": "cement",
+        "value": 0.9036338505188928
+      },
+      {
+        "name": "age",
+        "value": 0.09636614948110721
+      }
+    ]
+  },
+  {
+    "step": 14,
+    "type": "MAKE_LEAF",
+    "nodeId": "3",
+    "label": "Pred: 19.08"
+  },
+  {
+    "step": 15,
+    "type": "NODE_INIT",
+    "nodeId": "4",
+    "parentId": "2",
+    "depth": 2,
+    "samples": 385
+  },
+  {
+    "step": 16,
+    "type": "PILOT_RUN",
+    "nodeId": "4",
+    "pilotData": [
+      {
+        "name": "cement",
+        "value": 0.6382995333912116
+      },
+      {
+        "name": "age",
+        "value": 0.36170046660878846
+      }
+    ]
+  },
+  {
+    "step": 17,
+    "type": "SPLIT_DECISION",
+    "nodeId": "4",
+    "label": "Thr: -0.42",
+    "splitFeature": "cement"
+  },
+  {
+    "step": 18,
+    "type": "NODE_INIT",
+    "nodeId": "5",
+    "parentId": "4",
+    "depth": 3,
+    "samples": 162
+  },
+  {
+    "step": 19,
+    "type": "PILOT_RUN",
+    "nodeId": "5",
+    "pilotData": [
+      {
+        "name": "cement",
+        "value": 0.5161778889384737
+      },
+      {
+        "name": "age",
+        "value": 0.48382211106152634
+      }
+    ]
+  },
+  {
+    "step": 20,
+    "type": "SPLIT_DECISION",
+    "nodeId": "5",
+    "label": "Thr: -0.99",
+    "splitFeature": "cement"
+  },
+  {
+    "step": 21,
+    "type": "NODE_INIT",
+    "nodeId": "6",
+    "parentId": "5",
+    "depth": 4,
+    "samples": 104
+  },
+  {
+    "step": 22,
+    "type": "PILOT_RUN",
+    "nodeId": "6",
+    "pilotData": [
+      {
+        "name": "cement",
+        "value": 0.6356303698711805
+      },
+      {
+        "name": "age",
+        "value": 0.3643696301288195
+      }
+    ]
+  },
+  {
+    "step": 23,
+    "type": "SPLIT_DECISION",
+    "nodeId": "6",
+    "label": "Thr: -1.24",
+    "splitFeature": "cement"
+  },
+  {
+    "step": 24,
+    "type": "NODE_INIT",
+    "nodeId": "7",
+    "parentId": "6",
+    "depth": 5,
+    "samples": 47
+  },
+  {
+    "step": 25,
+    "type": "MAKE_LEAF",
+    "nodeId": "7",
+    "label": "Pred: 26.32"
+  },
+  {
+    "step": 26,
+    "type": "NODE_INIT",
+    "nodeId": "8",
+    "parentId": "6",
+    "depth": 5,
+    "samples": 57
+  },
+  {
+    "step": 27,
+    "type": "SPLIT_DECISION",
+    "nodeId": "8",
+    "label": "Thr: -1.19",
+    "splitFeature": "cement"
+  },
+  {
+    "step": 28,
+    "type": "NODE_INIT",
+    "nodeId": "9",
+    "parentId": "8",
+    "depth": 6,
+    "samples": 23
+  },
+  {
+    "step": 29,
+    "type": "MAKE_LEAF",
+    "nodeId": "9",
+    "label": "Pred: 20.30"
+  },
+  {
+    "step": 30,
+    "type": "NODE_INIT",
+    "nodeId": "10",
+    "parentId": "8",
+    "depth": 6,
+    "samples": 34
+  },
+  {
+    "step": 31,
+    "type": "MAKE_LEAF",
+    "nodeId": "10",
+    "label": "Pred: 35.91"
+  },
+  {
+    "step": 32,
+    "type": "NODE_INIT",
+    "nodeId": "11",
+    "parentId": "5",
+    "depth": 4,
+    "samples": 58
+  },
+  {
+    "step": 33,
+    "type": "MAKE_LEAF",
+    "nodeId": "11",
+    "label": "Pred: 32.78"
+  },
+  {
+    "step": 34,
+    "type": "NODE_INIT",
+    "nodeId": "12",
+    "parentId": "4",
+    "depth": 3,
+    "samples": 223
+  },
+  {
+    "step": 35,
+    "type": "PILOT_RUN",
+    "nodeId": "12",
+    "pilotData": [
+      {
+        "name": "cement",
+        "value": 0.6337766525040974
+      },
+      {
+        "name": "age",
+        "value": 0.3662233474959027
+      }
+    ]
+  },
+  {
+    "step": 36,
+    "type": "MAKE_LEAF",
+    "nodeId": "12",
+    "label": "Pred: 42.25"
+  }
+]

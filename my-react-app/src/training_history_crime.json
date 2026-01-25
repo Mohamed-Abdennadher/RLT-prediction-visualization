@@ -1,0 +1,2384 @@
+[
+  {
+    "step": 0,
+    "type": "NODE_INIT",
+    "nodeId": "0",
+    "parentId": null,
+    "depth": 0,
+    "samples": 1435
+  },
+  {
+    "step": 1,
+    "type": "PILOT_RUN",
+    "nodeId": "0",
+    "pilotData": [
+      {
+        "name": "NumIlleg",
+        "value": 0.13757163848031229
+      },
+      {
+        "name": "PctKids2Par",
+        "value": 0.11230409833485105
+      },
+      {
+        "name": "PctIlleg",
+        "value": 0.10580352024146673
+      },
+      {
+        "name": "PctFam2Par",
+        "value": 0.08079702001305235
+      },
+      {
+        "name": "racepctblack",
+        "value": 0.06747494881479536
+      }
+    ]
+  },
+  {
+    "step": 2,
+    "type": "MUTE_VARS",
+    "nodeId": "0",
+    "mutedVars": [
+      "racePctAsian",
+      "agePct12t21",
+      "agePct12t29",
+      "agePct16t24",
+      "agePct65up",
+      "pctUrban",
+      "pctWWage",
+      "pctWRetire",
+      "perCapInc",
+      "whitePerCap",
+      "indianPerCap",
+      "OtherPerCap",
+      "HispPerCap",
+      "PctBSorMore",
+      "PctEmplManu",
+      "PctEmplProfServ",
+      "PctOccupManu",
+      "MalePctNevMarr",
+      "PctImmigRecent",
+      "PctImmigRec5",
+      "PctImmigRec8",
+      "PctImmigRec10",
+      "PctRecentImmig",
+      "PctRecImmig5",
+      "PersPerOccupHous",
+      "MedNumBR",
+      "PctHousOccup",
+      "PctHousOwnOcc",
+      "PctVacMore6Mos",
+      "MedYrHousBuilt",
+      "OwnOccLowQuart",
+      "OwnOccMedVal",
+      "RentLowQ",
+      "RentMedian",
+      "RentHighQ",
+      "MedRentPctHousInc",
+      "PctBornSameState",
+      "PctSameHouse85",
+      "PctSameState85"
+    ]
+  },
+  {
+    "step": 3,
+    "type": "SPLIT_DECISION",
+    "nodeId": "0",
+    "label": "Thr: 0.69",
+    "splitFeature": "PctIlleg"
+  },
+  {
+    "step": 4,
+    "type": "NODE_INIT",
+    "nodeId": "1",
+    "parentId": "0",
+    "depth": 1,
+    "samples": 1341
+  },
+  {
+    "step": 5,
+    "type": "PILOT_RUN",
+    "nodeId": "1",
+    "pilotData": [
+      {
+        "name": "PctIlleg",
+        "value": 0.11754036385543339
+      },
+      {
+        "name": "PctYoungKids2Par",
+        "value": 0.11547896626425302
+      },
+      {
+        "name": "PctKids2Par",
+        "value": 0.0735763469622439
+      },
+      {
+        "name": "NumIlleg",
+        "value": 0.06899924455757259
+      },
+      {
+        "name": "PctFam2Par",
+        "value": 0.06388537589556689
+      }
+    ]
+  },
+  {
+    "step": 6,
+    "type": "MUTE_VARS",
+    "nodeId": "1",
+    "mutedVars": [
+      "householdsize",
+      "medIncome",
+      "pctWFarmSelf",
+      "pctWSocSec",
+      "blackPerCap",
+      "AsianPerCap",
+      "PctEmploy",
+      "PctOccupMgmtProf",
+      "PersPerFam",
+      "PctWorkMomYoungKids",
+      "PctRecImmig8",
+      "PctNotSpeakEnglWell",
+      "PctLargHouseFam",
+      "PctLargHouseOccup",
+      "PctWOFullPlumb",
+      "OwnOccHiQuart",
+      "MedRent",
+      "MedOwnCostPctInc",
+      "MedOwnCostPctIncNoMtg",
+      "PctForeignBorn",
+      "PctSameCity85",
+      "PopDens",
+      "PctUsePubTrans",
+      "LemasPctOfficDrugUn"
+    ]
+  },
+  {
+    "step": 7,
+    "type": "SPLIT_DECISION",
+    "nodeId": "1",
+    "label": "Thr: 0.66",
+    "splitFeature": "PctFam2Par"
+  },
+  {
+    "step": 8,
+    "type": "NODE_INIT",
+    "nodeId": "2",
+    "parentId": "1",
+    "depth": 2,
+    "samples": 743
+  },
+  {
+    "step": 9,
+    "type": "PILOT_RUN",
+    "nodeId": "2",
+    "pilotData": [
+      {
+        "name": "PctKids2Par",
+        "value": 0.13506549397496967
+      },
+      {
+        "name": "racePctWhite",
+        "value": 0.13221618119838893
+      },
+      {
+        "name": "NumIlleg",
+        "value": 0.10241739349846647
+      },
+      {
+        "name": "PctIlleg",
+        "value": 0.09977379443515709
+      },
+      {
+        "name": "PctFam2Par",
+        "value": 0.08537119672667264
+      }
+    ]
+  },
+  {
+    "step": 10,
+    "type": "MUTE_VARS",
+    "nodeId": "2",
+    "mutedVars": [
+      "PctUnemployed",
+      "LandArea",
+      "PersPerOwnOccHous",
+      "PersPerRentOccHous",
+      "PctPersOwnOccup",
+      "racePctHisp",
+      "population",
+      "PctPersDenseHous",
+      "PctHousNoPhone",
+      "medFamInc",
+      "PctRecImmig10",
+      "PctPopUnderPov",
+      "PctLess9thGrade",
+      "PctNotHSGrad"
+    ]
+  },
+  {
+    "step": 11,
+    "type": "SPLIT_DECISION",
+    "nodeId": "2",
+    "label": "Thr: 0.39",
+    "splitFeature": "PctFam2Par"
+  },
+  {
+    "step": 12,
+    "type": "NODE_INIT",
+    "nodeId": "3",
+    "parentId": "2",
+    "depth": 3,
+    "samples": 115
+  },
+  {
+    "step": 13,
+    "type": "PILOT_RUN",
+    "nodeId": "3",
+    "pilotData": [
+      {
+        "name": "PctKids2Par",
+        "value": 0.14379942389934142
+      },
+      {
+        "name": "PctFam2Par",
+        "value": 0.10364465535837733
+      },
+      {
+        "name": "PctTeen2Par",
+        "value": 0.08595773958831229
+      },
+      {
+        "name": "PctIlleg",
+        "value": 0.07336124031279248
+      },
+      {
+        "name": "HousVacant",
+        "value": 0.07049339827152587
+      }
+    ]
+  },
+  {
+    "step": 14,
+    "type": "MUTE_VARS",
+    "nodeId": "3",
+    "mutedVars": [
+      "racePctWhite",
+      "PctHousLess3BR",
+      "MalePctDivorce",
+      "TotalPctDiv",
+      "PctVacantBoarded",
+      "PctWorkMom",
+      "NumInShelters",
+      "NumStreet",
+      "PctSpeakEnglOnly"
+    ]
+  },
+  {
+    "step": 15,
+    "type": "SPLIT_DECISION",
+    "nodeId": "3",
+    "label": "Thr: 0.38",
+    "splitFeature": "PctKids2Par"
+  },
+  {
+    "step": 16,
+    "type": "NODE_INIT",
+    "nodeId": "4",
+    "parentId": "3",
+    "depth": 4,
+    "samples": 71
+  },
+  {
+    "step": 17,
+    "type": "SPLIT_DECISION",
+    "nodeId": "4",
+    "label": "Thr: 0.63",
+    "splitFeature": "PctIlleg"
+  },
+  {
+    "step": 18,
+    "type": "NODE_INIT",
+    "nodeId": "5",
+    "parentId": "4",
+    "depth": 5,
+    "samples": 47
+  },
+  {
+    "step": 19,
+    "type": "SPLIT_DECISION",
+    "nodeId": "5",
+    "label": "Thr: 0.33",
+    "splitFeature": "PctYoungKids2Par"
+  },
+  {
+    "step": 20,
+    "type": "NODE_INIT",
+    "nodeId": "6",
+    "parentId": "5",
+    "depth": 6,
+    "samples": 21
+  },
+  {
+    "step": 21,
+    "type": "MAKE_LEAF",
+    "nodeId": "6",
+    "label": "Pred: 0.55"
+  },
+  {
+    "step": 22,
+    "type": "NODE_INIT",
+    "nodeId": "7",
+    "parentId": "5",
+    "depth": 6,
+    "samples": 26
+  },
+  {
+    "step": 23,
+    "type": "MAKE_LEAF",
+    "nodeId": "7",
+    "label": "Pred: 0.40"
+  },
+  {
+    "step": 24,
+    "type": "NODE_INIT",
+    "nodeId": "8",
+    "parentId": "4",
+    "depth": 5,
+    "samples": 24
+  },
+  {
+    "step": 25,
+    "type": "MAKE_LEAF",
+    "nodeId": "8",
+    "label": "Pred: 0.74"
+  },
+  {
+    "step": 26,
+    "type": "NODE_INIT",
+    "nodeId": "9",
+    "parentId": "3",
+    "depth": 4,
+    "samples": 44
+  },
+  {
+    "step": 27,
+    "type": "MAKE_LEAF",
+    "nodeId": "9",
+    "label": "Pred: 0.33"
+  },
+  {
+    "step": 28,
+    "type": "NODE_INIT",
+    "nodeId": "10",
+    "parentId": "2",
+    "depth": 3,
+    "samples": 628
+  },
+  {
+    "step": 29,
+    "type": "PILOT_RUN",
+    "nodeId": "10",
+    "pilotData": [
+      {
+        "name": "racePctWhite",
+        "value": 0.13207047505336583
+      },
+      {
+        "name": "PctIlleg",
+        "value": 0.12006949967424907
+      },
+      {
+        "name": "NumIlleg",
+        "value": 0.10327192700425751
+      },
+      {
+        "name": "PctKids2Par",
+        "value": 0.10243672945252678
+      },
+      {
+        "name": "NumImmig",
+        "value": 0.06915678132124979
+      }
+    ]
+  },
+  {
+    "step": 30,
+    "type": "MUTE_VARS",
+    "nodeId": "10",
+    "mutedVars": [
+      "PctHousLess3BR",
+      "MalePctDivorce",
+      "FemalePctDiv",
+      "TotalPctDiv",
+      "PctVacantBoarded",
+      "PctYoungKids2Par",
+      "PctTeen2Par",
+      "NumInShelters",
+      "PctSpeakEnglOnly"
+    ]
+  },
+  {
+    "step": 31,
+    "type": "SPLIT_DECISION",
+    "nodeId": "10",
+    "label": "Thr: 0.86",
+    "splitFeature": "racePctWhite"
+  },
+  {
+    "step": 32,
+    "type": "NODE_INIT",
+    "nodeId": "11",
+    "parentId": "10",
+    "depth": 4,
+    "samples": 412
+  },
+  {
+    "step": 33,
+    "type": "PILOT_RUN",
+    "nodeId": "11",
+    "pilotData": [
+      {
+        "name": "HousVacant",
+        "value": 0.135658732476536
+      },
+      {
+        "name": "NumIlleg",
+        "value": 0.09964372483061393
+      },
+      {
+        "name": "PctKids2Par",
+        "value": 0.09534968774702461
+      },
+      {
+        "name": "NumStreet",
+        "value": 0.09354804379694269
+      },
+      {
+        "name": "NumUnderPov",
+        "value": 0.07952012074612237
+      }
+    ]
+  },
+  {
+    "step": 34,
+    "type": "MUTE_VARS",
+    "nodeId": "11",
+    "mutedVars": [
+      "racepctblack",
+      "pctWInvInc",
+      "PctWorkMom",
+      "pctWPubAsst",
+      "NumImmig"
+    ]
+  },
+  {
+    "step": 35,
+    "type": "SPLIT_DECISION",
+    "nodeId": "11",
+    "label": "Thr: 0.27",
+    "splitFeature": "HousVacant"
+  },
+  {
+    "step": 36,
+    "type": "NODE_INIT",
+    "nodeId": "12",
+    "parentId": "11",
+    "depth": 5,
+    "samples": 373
+  },
+  {
+    "step": 37,
+    "type": "PILOT_RUN",
+    "nodeId": "12",
+    "pilotData": [
+      {
+        "name": "PctKids2Par",
+        "value": 0.2079064879471923
+      },
+      {
+        "name": "racePctWhite",
+        "value": 0.16104770111399694
+      },
+      {
+        "name": "PctFam2Par",
+        "value": 0.13712681169038213
+      },
+      {
+        "name": "NumStreet",
+        "value": 0.1168660151623744
+      },
+      {
+        "name": "NumIlleg",
+        "value": 0.11569721604715984
+      }
+    ]
+  },
+  {
+    "step": 38,
+    "type": "MUTE_VARS",
+    "nodeId": "12",
+    "mutedVars": [
+      "numbUrban",
+      "NumUnderPov",
+      "HousVacant"
+    ]
+  },
+  {
+    "step": 39,
+    "type": "SPLIT_DECISION",
+    "nodeId": "12",
+    "label": "Thr: 0.84",
+    "splitFeature": "racePctWhite"
+  },
+  {
+    "step": 40,
+    "type": "NODE_INIT",
+    "nodeId": "13",
+    "parentId": "12",
+    "depth": 6,
+    "samples": 345
+  },
+  {
+    "step": 41,
+    "type": "PILOT_RUN",
+    "nodeId": "13",
+    "pilotData": [
+      {
+        "name": "PctKids2Par",
+        "value": 0.30336187583529123
+      },
+      {
+        "name": "NumIlleg",
+        "value": 0.21376249322864244
+      },
+      {
+        "name": "PctIlleg",
+        "value": 0.1475838200274413
+      },
+      {
+        "name": "PctFam2Par",
+        "value": 0.14402052009065702
+      },
+      {
+        "name": "racePctWhite",
+        "value": 0.13423603210529406
+      }
+    ]
+  },
+  {
+    "step": 42,
+    "type": "MUTE_VARS",
+    "nodeId": "13",
+    "mutedVars": [
+      "NumStreet",
+      "racePctWhite"
+    ]
+  },
+  {
+    "step": 43,
+    "type": "SPLIT_DECISION",
+    "nodeId": "13",
+    "label": "Thr: 0.58",
+    "splitFeature": "PctKids2Par"
+  },
+  {
+    "step": 44,
+    "type": "NODE_INIT",
+    "nodeId": "14",
+    "parentId": "13",
+    "depth": 7,
+    "samples": 240
+  },
+  {
+    "step": 45,
+    "type": "PILOT_RUN",
+    "nodeId": "14",
+    "pilotData": [
+      {
+        "name": "PctKids2Par",
+        "value": 0.31839821792057266
+      },
+      {
+        "name": "PctFam2Par",
+        "value": 0.2528881109324585
+      },
+      {
+        "name": "NumIlleg",
+        "value": 0.23721915631715407
+      },
+      {
+        "name": "PctIlleg",
+        "value": 0.1914945148298147
+      }
+    ]
+  },
+  {
+    "step": 46,
+    "type": "MUTE_VARS",
+    "nodeId": "14",
+    "mutedVars": [
+      "PctIlleg"
+    ]
+  },
+  {
+    "step": 47,
+    "type": "SPLIT_DECISION",
+    "nodeId": "14",
+    "label": "Thr: 0.50",
+    "splitFeature": "PctFam2Par"
+  },
+  {
+    "step": 48,
+    "type": "NODE_INIT",
+    "nodeId": "15",
+    "parentId": "14",
+    "depth": 8,
+    "samples": 124
+  },
+  {
+    "step": 49,
+    "type": "PILOT_RUN",
+    "nodeId": "15",
+    "pilotData": [
+      {
+        "name": "PctKids2Par",
+        "value": 0.43282005619797054
+      },
+      {
+        "name": "NumIlleg",
+        "value": 0.33623989095096113
+      },
+      {
+        "name": "PctFam2Par",
+        "value": 0.23094005285106842
+      }
+    ]
+  },
+  {
+    "step": 50,
+    "type": "MUTE_VARS",
+    "nodeId": "15",
+    "mutedVars": [
+      "PctFam2Par"
+    ]
+  },
+  {
+    "step": 51,
+    "type": "SPLIT_DECISION",
+    "nodeId": "15",
+    "label": "Thr: 0.05",
+    "splitFeature": "NumIlleg"
+  },
+  {
+    "step": 52,
+    "type": "NODE_INIT",
+    "nodeId": "16",
+    "parentId": "15",
+    "depth": 9,
+    "samples": 103
+  },
+  {
+    "step": 53,
+    "type": "PILOT_RUN",
+    "nodeId": "16",
+    "pilotData": [
+      {
+        "name": "PctKids2Par",
+        "value": 0.6365232176445869
+      },
+      {
+        "name": "NumIlleg",
+        "value": 0.36347678235541314
+      }
+    ]
+  },
+  {
+    "step": 54,
+    "type": "SPLIT_DECISION",
+    "nodeId": "16",
+    "label": "Thr: 0.01",
+    "splitFeature": "NumIlleg"
+  },
+  {
+    "step": 55,
+    "type": "NODE_INIT",
+    "nodeId": "17",
+    "parentId": "16",
+    "depth": 10,
+    "samples": 53
+  },
+  {
+    "step": 56,
+    "type": "SPLIT_DECISION",
+    "nodeId": "17",
+    "label": "Thr: 0.48",
+    "splitFeature": "PctKids2Par"
+  },
+  {
+    "step": 57,
+    "type": "NODE_INIT",
+    "nodeId": "18",
+    "parentId": "17",
+    "depth": 11,
+    "samples": 33
+  },
+  {
+    "step": 58,
+    "type": "MAKE_LEAF",
+    "nodeId": "18",
+    "label": "Pred: 0.33"
+  },
+  {
+    "step": 59,
+    "type": "NODE_INIT",
+    "nodeId": "19",
+    "parentId": "17",
+    "depth": 11,
+    "samples": 20
+  },
+  {
+    "step": 60,
+    "type": "MAKE_LEAF",
+    "nodeId": "19",
+    "label": "Pred: 0.24"
+  },
+  {
+    "step": 61,
+    "type": "NODE_INIT",
+    "nodeId": "20",
+    "parentId": "16",
+    "depth": 10,
+    "samples": 50
+  },
+  {
+    "step": 62,
+    "type": "MAKE_LEAF",
+    "nodeId": "20",
+    "label": "Pred: 0.40"
+  },
+  {
+    "step": 63,
+    "type": "NODE_INIT",
+    "nodeId": "21",
+    "parentId": "15",
+    "depth": 9,
+    "samples": 21
+  },
+  {
+    "step": 64,
+    "type": "MAKE_LEAF",
+    "nodeId": "21",
+    "label": "Pred: 0.42"
+  },
+  {
+    "step": 65,
+    "type": "NODE_INIT",
+    "nodeId": "22",
+    "parentId": "14",
+    "depth": 8,
+    "samples": 116
+  },
+  {
+    "step": 66,
+    "type": "PILOT_RUN",
+    "nodeId": "22",
+    "pilotData": [
+      {
+        "name": "PctKids2Par",
+        "value": 0.4269878348457118
+      },
+      {
+        "name": "NumIlleg",
+        "value": 0.2906894178347155
+      },
+      {
+        "name": "PctFam2Par",
+        "value": 0.28232274731957263
+      }
+    ]
+  },
+  {
+    "step": 67,
+    "type": "MUTE_VARS",
+    "nodeId": "22",
+    "mutedVars": [
+      "PctFam2Par"
+    ]
+  },
+  {
+    "step": 68,
+    "type": "MAKE_LEAF",
+    "nodeId": "22",
+    "label": "Pred: 0.29"
+  },
+  {
+    "step": 69,
+    "type": "NODE_INIT",
+    "nodeId": "23",
+    "parentId": "13",
+    "depth": 7,
+    "samples": 105
+  },
+  {
+    "step": 70,
+    "type": "PILOT_RUN",
+    "nodeId": "23",
+    "pilotData": [
+      {
+        "name": "PctKids2Par",
+        "value": 0.39488557920266826
+      },
+      {
+        "name": "NumIlleg",
+        "value": 0.30865461656063603
+      },
+      {
+        "name": "PctIlleg",
+        "value": 0.18543486326951913
+      },
+      {
+        "name": "PctFam2Par",
+        "value": 0.11102494096717658
+      }
+    ]
+  },
+  {
+    "step": 71,
+    "type": "MUTE_VARS",
+    "nodeId": "23",
+    "mutedVars": [
+      "PctFam2Par"
+    ]
+  },
+  {
+    "step": 72,
+    "type": "SPLIT_DECISION",
+    "nodeId": "23",
+    "label": "Thr: 0.60",
+    "splitFeature": "PctKids2Par"
+  },
+  {
+    "step": 73,
+    "type": "NODE_INIT",
+    "nodeId": "24",
+    "parentId": "23",
+    "depth": 8,
+    "samples": 32
+  },
+  {
+    "step": 74,
+    "type": "MAKE_LEAF",
+    "nodeId": "24",
+    "label": "Pred: 0.28"
+  },
+  {
+    "step": 75,
+    "type": "NODE_INIT",
+    "nodeId": "25",
+    "parentId": "23",
+    "depth": 8,
+    "samples": 73
+  },
+  {
+    "step": 76,
+    "type": "SPLIT_DECISION",
+    "nodeId": "25",
+    "label": "Thr: 0.23",
+    "splitFeature": "PctIlleg"
+  },
+  {
+    "step": 77,
+    "type": "NODE_INIT",
+    "nodeId": "26",
+    "parentId": "25",
+    "depth": 9,
+    "samples": 52
+  },
+  {
+    "step": 78,
+    "type": "MAKE_LEAF",
+    "nodeId": "26",
+    "label": "Pred: 0.17"
+  },
+  {
+    "step": 79,
+    "type": "NODE_INIT",
+    "nodeId": "27",
+    "parentId": "25",
+    "depth": 9,
+    "samples": 21
+  },
+  {
+    "step": 80,
+    "type": "MAKE_LEAF",
+    "nodeId": "27",
+    "label": "Pred: 0.27"
+  },
+  {
+    "step": 81,
+    "type": "NODE_INIT",
+    "nodeId": "28",
+    "parentId": "12",
+    "depth": 6,
+    "samples": 28
+  },
+  {
+    "step": 82,
+    "type": "MAKE_LEAF",
+    "nodeId": "28",
+    "label": "Pred: 0.21"
+  },
+  {
+    "step": 83,
+    "type": "NODE_INIT",
+    "nodeId": "29",
+    "parentId": "11",
+    "depth": 5,
+    "samples": 39
+  },
+  {
+    "step": 84,
+    "type": "MAKE_LEAF",
+    "nodeId": "29",
+    "label": "Pred: 0.52"
+  },
+  {
+    "step": 85,
+    "type": "NODE_INIT",
+    "nodeId": "30",
+    "parentId": "10",
+    "depth": 4,
+    "samples": 216
+  },
+  {
+    "step": 86,
+    "type": "PILOT_RUN",
+    "nodeId": "30",
+    "pilotData": [
+      {
+        "name": "PctWorkMom",
+        "value": 0.17762199951981553
+      },
+      {
+        "name": "pctWPubAsst",
+        "value": 0.16049314950468843
+      },
+      {
+        "name": "PctKids2Par",
+        "value": 0.1229616243128271
+      },
+      {
+        "name": "NumImmig",
+        "value": 0.1007811313849013
+      },
+      {
+        "name": "PctFam2Par",
+        "value": 0.09981346219487676
+      }
+    ]
+  },
+  {
+    "step": 87,
+    "type": "MUTE_VARS",
+    "nodeId": "30",
+    "mutedVars": [
+      "racepctblack",
+      "numbUrban",
+      "NumIlleg",
+      "NumStreet",
+      "NumUnderPov"
+    ]
+  },
+  {
+    "step": 88,
+    "type": "SPLIT_DECISION",
+    "nodeId": "30",
+    "label": "Thr: 0.54",
+    "splitFeature": "PctFam2Par"
+  },
+  {
+    "step": 89,
+    "type": "NODE_INIT",
+    "nodeId": "31",
+    "parentId": "30",
+    "depth": 5,
+    "samples": 89
+  },
+  {
+    "step": 90,
+    "type": "PILOT_RUN",
+    "nodeId": "31",
+    "pilotData": [
+      {
+        "name": "PctWorkMom",
+        "value": 0.28028841766256907
+      },
+      {
+        "name": "pctWPubAsst",
+        "value": 0.18678661014115083
+      },
+      {
+        "name": "NumImmig",
+        "value": 0.10925084239100129
+      },
+      {
+        "name": "PctKids2Par",
+        "value": 0.10766250253205727
+      },
+      {
+        "name": "HousVacant",
+        "value": 0.10160479951949793
+      }
+    ]
+  },
+  {
+    "step": 91,
+    "type": "MUTE_VARS",
+    "nodeId": "31",
+    "mutedVars": [
+      "PctIlleg",
+      "racePctWhite",
+      "pctWInvInc"
+    ]
+  },
+  {
+    "step": 92,
+    "type": "SPLIT_DECISION",
+    "nodeId": "31",
+    "label": "Thr: 0.47",
+    "splitFeature": "pctWPubAsst"
+  },
+  {
+    "step": 93,
+    "type": "NODE_INIT",
+    "nodeId": "32",
+    "parentId": "31",
+    "depth": 6,
+    "samples": 69
+  },
+  {
+    "step": 94,
+    "type": "SPLIT_DECISION",
+    "nodeId": "32",
+    "label": "Thr: 0.61",
+    "splitFeature": "PctWorkMom"
+  },
+  {
+    "step": 95,
+    "type": "NODE_INIT",
+    "nodeId": "33",
+    "parentId": "32",
+    "depth": 7,
+    "samples": 34
+  },
+  {
+    "step": 96,
+    "type": "MAKE_LEAF",
+    "nodeId": "33",
+    "label": "Pred: 0.19"
+  },
+  {
+    "step": 97,
+    "type": "NODE_INIT",
+    "nodeId": "34",
+    "parentId": "32",
+    "depth": 7,
+    "samples": 35
+  },
+  {
+    "step": 98,
+    "type": "MAKE_LEAF",
+    "nodeId": "34",
+    "label": "Pred: 0.17"
+  },
+  {
+    "step": 99,
+    "type": "NODE_INIT",
+    "nodeId": "35",
+    "parentId": "31",
+    "depth": 6,
+    "samples": 20
+  },
+  {
+    "step": 100,
+    "type": "MAKE_LEAF",
+    "nodeId": "35",
+    "label": "Pred: 0.20"
+  },
+  {
+    "step": 101,
+    "type": "NODE_INIT",
+    "nodeId": "36",
+    "parentId": "30",
+    "depth": 5,
+    "samples": 127
+  },
+  {
+    "step": 102,
+    "type": "PILOT_RUN",
+    "nodeId": "36",
+    "pilotData": [
+      {
+        "name": "HousVacant",
+        "value": 0.19028638698555633
+      },
+      {
+        "name": "PctKids2Par",
+        "value": 0.17040677577239535
+      },
+      {
+        "name": "PctWorkMom",
+        "value": 0.14945442231453612
+      },
+      {
+        "name": "pctWInvInc",
+        "value": 0.13167295911703486
+      },
+      {
+        "name": "pctWPubAsst",
+        "value": 0.09810135200347463
+      }
+    ]
+  },
+  {
+    "step": 103,
+    "type": "MUTE_VARS",
+    "nodeId": "36",
+    "mutedVars": [
+      "PctFam2Par",
+      "racePctWhite",
+      "NumImmig"
+    ]
+  },
+  {
+    "step": 104,
+    "type": "SPLIT_DECISION",
+    "nodeId": "36",
+    "label": "Thr: 0.51",
+    "splitFeature": "PctWorkMom"
+  },
+  {
+    "step": 105,
+    "type": "NODE_INIT",
+    "nodeId": "37",
+    "parentId": "36",
+    "depth": 6,
+    "samples": 25
+  },
+  {
+    "step": 106,
+    "type": "MAKE_LEAF",
+    "nodeId": "37",
+    "label": "Pred: 0.16"
+  },
+  {
+    "step": 107,
+    "type": "NODE_INIT",
+    "nodeId": "38",
+    "parentId": "36",
+    "depth": 6,
+    "samples": 102
+  },
+  {
+    "step": 108,
+    "type": "PILOT_RUN",
+    "nodeId": "38",
+    "pilotData": [
+      {
+        "name": "HousVacant",
+        "value": 0.3115076092790934
+      },
+      {
+        "name": "PctKids2Par",
+        "value": 0.17961234075496055
+      },
+      {
+        "name": "PctWorkMom",
+        "value": 0.1439593647825694
+      },
+      {
+        "name": "PctIlleg",
+        "value": 0.13080863897833706
+      },
+      {
+        "name": "pctWInvInc",
+        "value": 0.11844824992740349
+      }
+    ]
+  },
+  {
+    "step": 109,
+    "type": "MUTE_VARS",
+    "nodeId": "38",
+    "mutedVars": [
+      "pctWPubAsst",
+      "pctWInvInc"
+    ]
+  },
+  {
+    "step": 110,
+    "type": "SPLIT_DECISION",
+    "nodeId": "38",
+    "label": "Thr: 0.05",
+    "splitFeature": "HousVacant"
+  },
+  {
+    "step": 111,
+    "type": "NODE_INIT",
+    "nodeId": "39",
+    "parentId": "38",
+    "depth": 7,
+    "samples": 78
+  },
+  {
+    "step": 112,
+    "type": "SPLIT_DECISION",
+    "nodeId": "39",
+    "label": "Thr: 0.02",
+    "splitFeature": "HousVacant"
+  },
+  {
+    "step": 113,
+    "type": "NODE_INIT",
+    "nodeId": "40",
+    "parentId": "39",
+    "depth": 8,
+    "samples": 49
+  },
+  {
+    "step": 114,
+    "type": "SPLIT_DECISION",
+    "nodeId": "40",
+    "label": "Thr: 0.01",
+    "splitFeature": "HousVacant"
+  },
+  {
+    "step": 115,
+    "type": "NODE_INIT",
+    "nodeId": "41",
+    "parentId": "40",
+    "depth": 9,
+    "samples": 27
+  },
+  {
+    "step": 116,
+    "type": "MAKE_LEAF",
+    "nodeId": "41",
+    "label": "Pred: 0.10"
+  },
+  {
+    "step": 117,
+    "type": "NODE_INIT",
+    "nodeId": "42",
+    "parentId": "40",
+    "depth": 9,
+    "samples": 22
+  },
+  {
+    "step": 118,
+    "type": "MAKE_LEAF",
+    "nodeId": "42",
+    "label": "Pred: 0.09"
+  },
+  {
+    "step": 119,
+    "type": "NODE_INIT",
+    "nodeId": "43",
+    "parentId": "39",
+    "depth": 8,
+    "samples": 29
+  },
+  {
+    "step": 120,
+    "type": "MAKE_LEAF",
+    "nodeId": "43",
+    "label": "Pred: 0.15"
+  },
+  {
+    "step": 121,
+    "type": "NODE_INIT",
+    "nodeId": "44",
+    "parentId": "38",
+    "depth": 7,
+    "samples": 24
+  },
+  {
+    "step": 122,
+    "type": "MAKE_LEAF",
+    "nodeId": "44",
+    "label": "Pred: 0.17"
+  },
+  {
+    "step": 123,
+    "type": "NODE_INIT",
+    "nodeId": "45",
+    "parentId": "1",
+    "depth": 2,
+    "samples": 598
+  },
+  {
+    "step": 124,
+    "type": "PILOT_RUN",
+    "nodeId": "45",
+    "pilotData": [
+      {
+        "name": "PctPersDenseHous",
+        "value": 0.14423465819480683
+      },
+      {
+        "name": "racePctHisp",
+        "value": 0.14269545522521443
+      },
+      {
+        "name": "PctSpeakEnglOnly",
+        "value": 0.09581407617971614
+      },
+      {
+        "name": "FemalePctDiv",
+        "value": 0.06710423316823401
+      },
+      {
+        "name": "PctKids2Par",
+        "value": 0.06061387838234581
+      }
+    ]
+  },
+  {
+    "step": 125,
+    "type": "MUTE_VARS",
+    "nodeId": "45",
+    "mutedVars": [
+      "PctUnemployed",
+      "PersPerOwnOccHous",
+      "PersPerRentOccHous",
+      "population",
+      "LandArea",
+      "HousVacant",
+      "PctVacantBoarded",
+      "PctYoungKids2Par",
+      "PctTeen2Par",
+      "pctWPubAsst",
+      "NumIlleg",
+      "medFamInc",
+      "NumInShelters",
+      "PctNotHSGrad"
+    ]
+  },
+  {
+    "step": 126,
+    "type": "SPLIT_DECISION",
+    "nodeId": "45",
+    "label": "Thr: 0.09",
+    "splitFeature": "PctPersDenseHous"
+  },
+  {
+    "step": 127,
+    "type": "NODE_INIT",
+    "nodeId": "46",
+    "parentId": "45",
+    "depth": 3,
+    "samples": 387
+  },
+  {
+    "step": 128,
+    "type": "PILOT_RUN",
+    "nodeId": "46",
+    "pilotData": [
+      {
+        "name": "pctWInvInc",
+        "value": 0.20916942021788157
+      },
+      {
+        "name": "PctFam2Par",
+        "value": 0.09331879831509012
+      },
+      {
+        "name": "racepctblack",
+        "value": 0.06848813705404587
+      },
+      {
+        "name": "MalePctDivorce",
+        "value": 0.06675843174397086
+      },
+      {
+        "name": "PctKids2Par",
+        "value": 0.06405522466554557
+      }
+    ]
+  },
+  {
+    "step": 129,
+    "type": "MUTE_VARS",
+    "nodeId": "46",
+    "mutedVars": [
+      "racePctWhite",
+      "racePctHisp",
+      "FemalePctDiv",
+      "NumUnderPov",
+      "numbUrban",
+      "NumImmig",
+      "NumStreet",
+      "PctRecImmig10",
+      "PctPopUnderPov"
+    ]
+  },
+  {
+    "step": 130,
+    "type": "SPLIT_DECISION",
+    "nodeId": "46",
+    "label": "Thr: 0.78",
+    "splitFeature": "PctKids2Par"
+  },
+  {
+    "step": 131,
+    "type": "NODE_INIT",
+    "nodeId": "47",
+    "parentId": "46",
+    "depth": 4,
+    "samples": 132
+  },
+  {
+    "step": 132,
+    "type": "PILOT_RUN",
+    "nodeId": "47",
+    "pilotData": [
+      {
+        "name": "pctWInvInc",
+        "value": 0.14478321824324866
+      },
+      {
+        "name": "PctSpeakEnglOnly",
+        "value": 0.13344162513507993
+      },
+      {
+        "name": "racepctblack",
+        "value": 0.10648412405442777
+      },
+      {
+        "name": "PctHousLess3BR",
+        "value": 0.1000511135604778
+      },
+      {
+        "name": "PctLess9thGrade",
+        "value": 0.08691349561678201
+      }
+    ]
+  },
+  {
+    "step": 133,
+    "type": "MUTE_VARS",
+    "nodeId": "47",
+    "mutedVars": [
+      "PctPersOwnOccup",
+      "PctPersDenseHous",
+      "MalePctDivorce",
+      "PctFam2Par",
+      "PctKids2Par"
+    ]
+  },
+  {
+    "step": 134,
+    "type": "SPLIT_DECISION",
+    "nodeId": "47",
+    "label": "Thr: 0.05",
+    "splitFeature": "racepctblack"
+  },
+  {
+    "step": 135,
+    "type": "NODE_INIT",
+    "nodeId": "48",
+    "parentId": "47",
+    "depth": 5,
+    "samples": 90
+  },
+  {
+    "step": 136,
+    "type": "PILOT_RUN",
+    "nodeId": "48",
+    "pilotData": [
+      {
+        "name": "PctLess9thGrade",
+        "value": 0.27557615425414766
+      },
+      {
+        "name": "PctHousNoPhone",
+        "value": 0.16718569595880137
+      },
+      {
+        "name": "PctWorkMom",
+        "value": 0.12142233574541463
+      },
+      {
+        "name": "racepctblack",
+        "value": 0.10551368156364227
+      },
+      {
+        "name": "TotalPctDiv",
+        "value": 0.1024093217838487
+      }
+    ]
+  },
+  {
+    "step": 137,
+    "type": "MUTE_VARS",
+    "nodeId": "48",
+    "mutedVars": [
+      "PctIlleg",
+      "PctHousLess3BR",
+      "pctWInvInc"
+    ]
+  },
+  {
+    "step": 138,
+    "type": "SPLIT_DECISION",
+    "nodeId": "48",
+    "label": "Thr: 0.19",
+    "splitFeature": "PctLess9thGrade"
+  },
+  {
+    "step": 139,
+    "type": "NODE_INIT",
+    "nodeId": "49",
+    "parentId": "48",
+    "depth": 6,
+    "samples": 25
+  },
+  {
+    "step": 140,
+    "type": "MAKE_LEAF",
+    "nodeId": "49",
+    "label": "Pred: 0.10"
+  },
+  {
+    "step": 141,
+    "type": "NODE_INIT",
+    "nodeId": "50",
+    "parentId": "48",
+    "depth": 6,
+    "samples": 65
+  },
+  {
+    "step": 142,
+    "type": "SPLIT_DECISION",
+    "nodeId": "50",
+    "label": "Thr: 0.90",
+    "splitFeature": "PctSpeakEnglOnly"
+  },
+  {
+    "step": 143,
+    "type": "NODE_INIT",
+    "nodeId": "51",
+    "parentId": "50",
+    "depth": 7,
+    "samples": 35
+  },
+  {
+    "step": 144,
+    "type": "MAKE_LEAF",
+    "nodeId": "51",
+    "label": "Pred: 0.07"
+  },
+  {
+    "step": 145,
+    "type": "NODE_INIT",
+    "nodeId": "52",
+    "parentId": "50",
+    "depth": 7,
+    "samples": 30
+  },
+  {
+    "step": 146,
+    "type": "MAKE_LEAF",
+    "nodeId": "52",
+    "label": "Pred: 0.05"
+  },
+  {
+    "step": 147,
+    "type": "NODE_INIT",
+    "nodeId": "53",
+    "parentId": "47",
+    "depth": 5,
+    "samples": 42
+  },
+  {
+    "step": 148,
+    "type": "MAKE_LEAF",
+    "nodeId": "53",
+    "label": "Pred: 0.14"
+  },
+  {
+    "step": 149,
+    "type": "NODE_INIT",
+    "nodeId": "54",
+    "parentId": "46",
+    "depth": 4,
+    "samples": 255
+  },
+  {
+    "step": 150,
+    "type": "PILOT_RUN",
+    "nodeId": "54",
+    "pilotData": [
+      {
+        "name": "PctWorkMom",
+        "value": 0.1910163831217754
+      },
+      {
+        "name": "TotalPctDiv",
+        "value": 0.15081137661864982
+      },
+      {
+        "name": "PctFam2Par",
+        "value": 0.1413255767081637
+      },
+      {
+        "name": "pctWInvInc",
+        "value": 0.11249435743425662
+      },
+      {
+        "name": "PctKids2Par",
+        "value": 0.07041148737428873
+      }
+    ]
+  },
+  {
+    "step": 151,
+    "type": "MUTE_VARS",
+    "nodeId": "54",
+    "mutedVars": [
+      "racepctblack",
+      "PctPersDenseHous",
+      "PctHousLess3BR",
+      "PctHousNoPhone",
+      "PctSpeakEnglOnly"
+    ]
+  },
+  {
+    "step": 152,
+    "type": "SPLIT_DECISION",
+    "nodeId": "54",
+    "label": "Thr: 0.84",
+    "splitFeature": "PctKids2Par"
+  },
+  {
+    "step": 153,
+    "type": "NODE_INIT",
+    "nodeId": "55",
+    "parentId": "54",
+    "depth": 5,
+    "samples": 98
+  },
+  {
+    "step": 154,
+    "type": "PILOT_RUN",
+    "nodeId": "55",
+    "pilotData": [
+      {
+        "name": "PctWorkMom",
+        "value": 0.19894310267001739
+      },
+      {
+        "name": "pctWInvInc",
+        "value": 0.1972096847416703
+      },
+      {
+        "name": "TotalPctDiv",
+        "value": 0.15319388673436932
+      },
+      {
+        "name": "PctPersOwnOccup",
+        "value": 0.14987787871688513
+      },
+      {
+        "name": "MalePctDivorce",
+        "value": 0.08290310207618726
+      }
+    ]
+  },
+  {
+    "step": 155,
+    "type": "MUTE_VARS",
+    "nodeId": "55",
+    "mutedVars": [
+      "PctIlleg",
+      "PctFam2Par",
+      "PctKids2Par"
+    ]
+  },
+  {
+    "step": 156,
+    "type": "SPLIT_DECISION",
+    "nodeId": "55",
+    "label": "Thr: 0.61",
+    "splitFeature": "pctWInvInc"
+  },
+  {
+    "step": 157,
+    "type": "NODE_INIT",
+    "nodeId": "56",
+    "parentId": "55",
+    "depth": 6,
+    "samples": 29
+  },
+  {
+    "step": 158,
+    "type": "MAKE_LEAF",
+    "nodeId": "56",
+    "label": "Pred: 0.08"
+  },
+  {
+    "step": 159,
+    "type": "NODE_INIT",
+    "nodeId": "57",
+    "parentId": "55",
+    "depth": 6,
+    "samples": 69
+  },
+  {
+    "step": 160,
+    "type": "SPLIT_DECISION",
+    "nodeId": "57",
+    "label": "Thr: 0.59",
+    "splitFeature": "PctWorkMom"
+  },
+  {
+    "step": 161,
+    "type": "NODE_INIT",
+    "nodeId": "58",
+    "parentId": "57",
+    "depth": 7,
+    "samples": 36
+  },
+  {
+    "step": 162,
+    "type": "MAKE_LEAF",
+    "nodeId": "58",
+    "label": "Pred: 0.06"
+  },
+  {
+    "step": 163,
+    "type": "NODE_INIT",
+    "nodeId": "59",
+    "parentId": "57",
+    "depth": 7,
+    "samples": 33
+  },
+  {
+    "step": 164,
+    "type": "MAKE_LEAF",
+    "nodeId": "59",
+    "label": "Pred: 0.08"
+  },
+  {
+    "step": 165,
+    "type": "NODE_INIT",
+    "nodeId": "60",
+    "parentId": "54",
+    "depth": 5,
+    "samples": 157
+  },
+  {
+    "step": 166,
+    "type": "PILOT_RUN",
+    "nodeId": "60",
+    "pilotData": [
+      {
+        "name": "PctFam2Par",
+        "value": 0.21499299129256152
+      },
+      {
+        "name": "pctWInvInc",
+        "value": 0.20532902281451088
+      },
+      {
+        "name": "MalePctDivorce",
+        "value": 0.14556363416851667
+      },
+      {
+        "name": "PctPersOwnOccup",
+        "value": 0.10787269122381223
+      },
+      {
+        "name": "TotalPctDiv",
+        "value": 0.10545644910062926
+      }
+    ]
+  },
+  {
+    "step": 167,
+    "type": "MUTE_VARS",
+    "nodeId": "60",
+    "mutedVars": [
+      "PctIlleg",
+      "PctKids2Par",
+      "PctLess9thGrade"
+    ]
+  },
+  {
+    "step": 168,
+    "type": "SPLIT_DECISION",
+    "nodeId": "60",
+    "label": "Thr: 0.22",
+    "splitFeature": "MalePctDivorce"
+  },
+  {
+    "step": 169,
+    "type": "NODE_INIT",
+    "nodeId": "61",
+    "parentId": "60",
+    "depth": 6,
+    "samples": 84
+  },
+  {
+    "step": 170,
+    "type": "PILOT_RUN",
+    "nodeId": "61",
+    "pilotData": [
+      {
+        "name": "PctFam2Par",
+        "value": 0.2566120553641473
+      },
+      {
+        "name": "PctWorkMom",
+        "value": 0.24207311797888492
+      },
+      {
+        "name": "TotalPctDiv",
+        "value": 0.1570899038987153
+      },
+      {
+        "name": "pctWInvInc",
+        "value": 0.11750443859832732
+      },
+      {
+        "name": "PctPersOwnOccup",
+        "value": 0.11621984685186264
+      }
+    ]
+  },
+  {
+    "step": 171,
+    "type": "MUTE_VARS",
+    "nodeId": "61",
+    "mutedVars": [
+      "PctPersOwnOccup",
+      "MalePctDivorce"
+    ]
+  },
+  {
+    "step": 172,
+    "type": "SPLIT_DECISION",
+    "nodeId": "61",
+    "label": "Thr: 0.39",
+    "splitFeature": "PctWorkMom"
+  },
+  {
+    "step": 173,
+    "type": "NODE_INIT",
+    "nodeId": "62",
+    "parentId": "61",
+    "depth": 7,
+    "samples": 32
+  },
+  {
+    "step": 174,
+    "type": "MAKE_LEAF",
+    "nodeId": "62",
+    "label": "Pred: 0.03"
+  },
+  {
+    "step": 175,
+    "type": "NODE_INIT",
+    "nodeId": "63",
+    "parentId": "61",
+    "depth": 7,
+    "samples": 52
+  },
+  {
+    "step": 176,
+    "type": "MAKE_LEAF",
+    "nodeId": "63",
+    "label": "Pred: 0.04"
+  },
+  {
+    "step": 177,
+    "type": "NODE_INIT",
+    "nodeId": "64",
+    "parentId": "60",
+    "depth": 6,
+    "samples": 73
+  },
+  {
+    "step": 178,
+    "type": "SPLIT_DECISION",
+    "nodeId": "64",
+    "label": "Thr: 0.39",
+    "splitFeature": "PctWorkMom"
+  },
+  {
+    "step": 179,
+    "type": "NODE_INIT",
+    "nodeId": "65",
+    "parentId": "64",
+    "depth": 7,
+    "samples": 22
+  },
+  {
+    "step": 180,
+    "type": "MAKE_LEAF",
+    "nodeId": "65",
+    "label": "Pred: 0.04"
+  },
+  {
+    "step": 181,
+    "type": "NODE_INIT",
+    "nodeId": "66",
+    "parentId": "64",
+    "depth": 7,
+    "samples": 51
+  },
+  {
+    "step": 182,
+    "type": "SPLIT_DECISION",
+    "nodeId": "66",
+    "label": "Thr: 0.25",
+    "splitFeature": "MalePctDivorce"
+  },
+  {
+    "step": 183,
+    "type": "NODE_INIT",
+    "nodeId": "67",
+    "parentId": "66",
+    "depth": 8,
+    "samples": 20
+  },
+  {
+    "step": 184,
+    "type": "MAKE_LEAF",
+    "nodeId": "67",
+    "label": "Pred: 0.04"
+  },
+  {
+    "step": 185,
+    "type": "NODE_INIT",
+    "nodeId": "68",
+    "parentId": "66",
+    "depth": 8,
+    "samples": 31
+  },
+  {
+    "step": 186,
+    "type": "MAKE_LEAF",
+    "nodeId": "68",
+    "label": "Pred: 0.07"
+  },
+  {
+    "step": 187,
+    "type": "NODE_INIT",
+    "nodeId": "69",
+    "parentId": "45",
+    "depth": 3,
+    "samples": 211
+  },
+  {
+    "step": 188,
+    "type": "PILOT_RUN",
+    "nodeId": "69",
+    "pilotData": [
+      {
+        "name": "racePctHisp",
+        "value": 0.23730304576668979
+      },
+      {
+        "name": "PctPersDenseHous",
+        "value": 0.1275898844380916
+      },
+      {
+        "name": "PctSpeakEnglOnly",
+        "value": 0.09839931141910271
+      },
+      {
+        "name": "NumStreet",
+        "value": 0.059254042875208614
+      },
+      {
+        "name": "MalePctDivorce",
+        "value": 0.056130222912244385
+      }
+    ]
+  },
+  {
+    "step": 189,
+    "type": "MUTE_VARS",
+    "nodeId": "69",
+    "mutedVars": [
+      "racepctblack",
+      "PctPersOwnOccup",
+      "numbUrban",
+      "PctHousNoPhone",
+      "pctWInvInc",
+      "PctIlleg",
+      "NumImmig",
+      "NumUnderPov",
+      "PctPopUnderPov"
+    ]
+  },
+  {
+    "step": 190,
+    "type": "SPLIT_DECISION",
+    "nodeId": "69",
+    "label": "Thr: 0.51",
+    "splitFeature": "PctSpeakEnglOnly"
+  },
+  {
+    "step": 191,
+    "type": "NODE_INIT",
+    "nodeId": "70",
+    "parentId": "69",
+    "depth": 4,
+    "samples": 35
+  },
+  {
+    "step": 192,
+    "type": "MAKE_LEAF",
+    "nodeId": "70",
+    "label": "Pred: 0.27"
+  },
+  {
+    "step": 193,
+    "type": "NODE_INIT",
+    "nodeId": "71",
+    "parentId": "69",
+    "depth": 4,
+    "samples": 176
+  },
+  {
+    "step": 194,
+    "type": "PILOT_RUN",
+    "nodeId": "71",
+    "pilotData": [
+      {
+        "name": "racePctHisp",
+        "value": 0.213817956336439
+      },
+      {
+        "name": "PctKids2Par",
+        "value": 0.16411141235600069
+      },
+      {
+        "name": "FemalePctDiv",
+        "value": 0.08394850003671
+      },
+      {
+        "name": "TotalPctDiv",
+        "value": 0.0720630222420626
+      },
+      {
+        "name": "PctPersDenseHous",
+        "value": 0.07020578353479871
+      }
+    ]
+  },
+  {
+    "step": 195,
+    "type": "MUTE_VARS",
+    "nodeId": "71",
+    "mutedVars": [
+      "MalePctDivorce",
+      "PctFam2Par",
+      "NumStreet",
+      "PctRecImmig10",
+      "PctLess9thGrade"
+    ]
+  },
+  {
+    "step": 196,
+    "type": "SPLIT_DECISION",
+    "nodeId": "71",
+    "label": "Thr: 0.43",
+    "splitFeature": "TotalPctDiv"
+  },
+  {
+    "step": 197,
+    "type": "NODE_INIT",
+    "nodeId": "72",
+    "parentId": "71",
+    "depth": 5,
+    "samples": 69
+  },
+  {
+    "step": 198,
+    "type": "SPLIT_DECISION",
+    "nodeId": "72",
+    "label": "Thr: 0.83",
+    "splitFeature": "PctSpeakEnglOnly"
+  },
+  {
+    "step": 199,
+    "type": "NODE_INIT",
+    "nodeId": "73",
+    "parentId": "72",
+    "depth": 6,
+    "samples": 42
+  },
+  {
+    "step": 200,
+    "type": "MAKE_LEAF",
+    "nodeId": "73",
+    "label": "Pred: 0.11"
+  },
+  {
+    "step": 201,
+    "type": "NODE_INIT",
+    "nodeId": "74",
+    "parentId": "72",
+    "depth": 6,
+    "samples": 27
+  },
+  {
+    "step": 202,
+    "type": "MAKE_LEAF",
+    "nodeId": "74",
+    "label": "Pred: 0.09"
+  },
+  {
+    "step": 203,
+    "type": "NODE_INIT",
+    "nodeId": "75",
+    "parentId": "71",
+    "depth": 5,
+    "samples": 107
+  },
+  {
+    "step": 204,
+    "type": "PILOT_RUN",
+    "nodeId": "75",
+    "pilotData": [
+      {
+        "name": "racePctHisp",
+        "value": 0.19735876416442003
+      },
+      {
+        "name": "PctSpeakEnglOnly",
+        "value": 0.17388280966004643
+      },
+      {
+        "name": "PctKids2Par",
+        "value": 0.17034188773148495
+      },
+      {
+        "name": "racePctWhite",
+        "value": 0.14237182168619877
+      },
+      {
+        "name": "FemalePctDiv",
+        "value": 0.12060231193489887
+      }
+    ]
+  },
+  {
+    "step": 205,
+    "type": "MUTE_VARS",
+    "nodeId": "75",
+    "mutedVars": [
+      "TotalPctDiv",
+      "PctPersDenseHous",
+      "PctHousLess3BR"
+    ]
+  },
+  {
+    "step": 206,
+    "type": "SPLIT_DECISION",
+    "nodeId": "75",
+    "label": "Thr: 0.21",
+    "splitFeature": "racePctHisp"
+  },
+  {
+    "step": 207,
+    "type": "NODE_INIT",
+    "nodeId": "76",
+    "parentId": "75",
+    "depth": 6,
+    "samples": 72
+  },
+  {
+    "step": 208,
+    "type": "SPLIT_DECISION",
+    "nodeId": "76",
+    "label": "Thr: 0.87",
+    "splitFeature": "PctSpeakEnglOnly"
+  },
+  {
+    "step": 209,
+    "type": "NODE_INIT",
+    "nodeId": "77",
+    "parentId": "76",
+    "depth": 7,
+    "samples": 41
+  },
+  {
+    "step": 210,
+    "type": "SPLIT_DECISION",
+    "nodeId": "77",
+    "label": "Thr: 0.57",
+    "splitFeature": "PctWorkMom"
+  },
+  {
+    "step": 211,
+    "type": "NODE_INIT",
+    "nodeId": "78",
+    "parentId": "77",
+    "depth": 8,
+    "samples": 21
+  },
+  {
+    "step": 212,
+    "type": "MAKE_LEAF",
+    "nodeId": "78",
+    "label": "Pred: 0.18"
+  },
+  {
+    "step": 213,
+    "type": "NODE_INIT",
+    "nodeId": "79",
+    "parentId": "77",
+    "depth": 8,
+    "samples": 20
+  },
+  {
+    "step": 214,
+    "type": "MAKE_LEAF",
+    "nodeId": "79",
+    "label": "Pred: 0.21"
+  },
+  {
+    "step": 215,
+    "type": "NODE_INIT",
+    "nodeId": "80",
+    "parentId": "76",
+    "depth": 7,
+    "samples": 31
+  },
+  {
+    "step": 216,
+    "type": "MAKE_LEAF",
+    "nodeId": "80",
+    "label": "Pred: 0.09"
+  },
+  {
+    "step": 217,
+    "type": "NODE_INIT",
+    "nodeId": "81",
+    "parentId": "75",
+    "depth": 6,
+    "samples": 35
+  },
+  {
+    "step": 218,
+    "type": "MAKE_LEAF",
+    "nodeId": "81",
+    "label": "Pred: 0.19"
+  },
+  {
+    "step": 219,
+    "type": "NODE_INIT",
+    "nodeId": "82",
+    "parentId": "0",
+    "depth": 1,
+    "samples": 94
+  },
+  {
+    "step": 220,
+    "type": "PILOT_RUN",
+    "nodeId": "82",
+    "pilotData": [
+      {
+        "name": "PctUsePubTrans",
+        "value": 0.0650075632180627
+      },
+      {
+        "name": "FemalePctDiv",
+        "value": 0.06260467150604955
+      },
+      {
+        "name": "TotalPctDiv",
+        "value": 0.055951587820903224
+      },
+      {
+        "name": "PctFam2Par",
+        "value": 0.04934737266193127
+      },
+      {
+        "name": "numbUrban",
+        "value": 0.04592881406490117
+      }
+    ]
+  },
+  {
+    "step": 221,
+    "type": "MUTE_VARS",
+    "nodeId": "82",
+    "mutedVars": [
+      "medIncome",
+      "pctWSocSec",
+      "pctWPubAsst",
+      "blackPerCap",
+      "AsianPerCap",
+      "PctPopUnderPov",
+      "PctNotHSGrad",
+      "PctEmploy",
+      "PctOccupMgmtProf",
+      "PctWorkMomYoungKids",
+      "PctWorkMom",
+      "NumImmig",
+      "PctRecImmig8",
+      "PctNotSpeakEnglWell",
+      "PersPerOwnOccHous",
+      "PctWOFullPlumb",
+      "OwnOccHiQuart",
+      "MedOwnCostPctInc",
+      "MedOwnCostPctIncNoMtg",
+      "NumInShelters",
+      "PctForeignBorn",
+      "PctSameCity85",
+      "LandArea",
+      "PopDens"
+    ]
+  },
+  {
+    "step": 222,
+    "type": "SPLIT_DECISION",
+    "nodeId": "82",
+    "label": "Thr: 0.63",
+    "splitFeature": "FemalePctDiv"
+  },
+  {
+    "step": 223,
+    "type": "NODE_INIT",
+    "nodeId": "83",
+    "parentId": "82",
+    "depth": 2,
+    "samples": 40
+  },
+  {
+    "step": 224,
+    "type": "MAKE_LEAF",
+    "nodeId": "83",
+    "label": "Pred: 0.56"
+  },
+  {
+    "step": 225,
+    "type": "NODE_INIT",
+    "nodeId": "84",
+    "parentId": "82",
+    "depth": 2,
+    "samples": 54
+  },
+  {
+    "step": 226,
+    "type": "MAKE_LEAF",
+    "nodeId": "84",
+    "label": "Pred: 0.82"
+  }
+]

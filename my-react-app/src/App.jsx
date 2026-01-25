@@ -3,8 +3,8 @@ import React from 'react';
 // import RLTTree from './RLTTree'; 
 import TrainingPlayer from './TrainingPlayer'; 
 
-import treeData from './tree_data.json';
-import historyData from './training_history.json';
+import treeData from './tree_data_crime.json';
+import historyData from './training_history_crime.json';
 
 export default function App() {
   return (

@@ -1,0 +1,499 @@
+[
+  {
+    "step": 0,
+    "type": "NODE_INIT",
+    "nodeId": "0",
+    "parentId": null,
+    "depth": 0,
+    "samples": 552
+  },
+  {
+    "step": 1,
+    "type": "PILOT_RUN",
+    "nodeId": "0",
+    "pilotData": [
+      {
+        "name": "Relative_Compactness",
+        "value": 0.32566263119137034
+      },
+      {
+        "name": "Overall_Height",
+        "value": 0.2559926539564678
+      },
+      {
+        "name": "Surface_Area",
+        "value": 0.2213086908823975
+      },
+      {
+        "name": "Roof_Area",
+        "value": 0.1219310920339625
+      },
+      {
+        "name": "Wall_Area",
+        "value": 0.04219399741135375
+      }
+    ]
+  },
+  {
+    "step": 2,
+    "type": "MUTE_VARS",
+    "nodeId": "0",
+    "mutedVars": [
+      "Wall_Area",
+      "Orientation",
+      "Glazing_Area",
+      "Glazing_Area_Distribution"
+    ]
+  },
+  {
+    "step": 3,
+    "type": "SPLIT_DECISION",
+    "nodeId": "0",
+    "label": "Thr: -1.00",
+    "splitFeature": "Overall_Height"
+  },
+  {
+    "step": 4,
+    "type": "NODE_INIT",
+    "nodeId": "1",
+    "parentId": "0",
+    "depth": 1,
+    "samples": 287
+  },
+  {
+    "step": 5,
+    "type": "PILOT_RUN",
+    "nodeId": "1",
+    "pilotData": [
+      {
+        "name": "Relative_Compactness",
+        "value": 0.5471558039715897
+      },
+      {
+        "name": "Surface_Area",
+        "value": 0.4528441960284104
+      },
+      {
+        "name": "Roof_Area",
+        "value": 0.0
+      },
+      {
+        "name": "Overall_Height",
+        "value": 0.0
+      }
+    ]
+  },
+  {
+    "step": 6,
+    "type": "MUTE_VARS",
+    "nodeId": "1",
+    "mutedVars": [
+      "Roof_Area",
+      "Overall_Height"
+    ]
+  },
+  {
+    "step": 7,
+    "type": "SPLIT_DECISION",
+    "nodeId": "1",
+    "label": "Thr: -0.99",
+    "splitFeature": "Relative_Compactness"
+  },
+  {
+    "step": 8,
+    "type": "NODE_INIT",
+    "nodeId": "2",
+    "parentId": "1",
+    "depth": 2,
+    "samples": 147
+  },
+  {
+    "step": 9,
+    "type": "PILOT_RUN",
+    "nodeId": "2",
+    "pilotData": [
+      {
+        "name": "Surface_Area",
+        "value": 0.5275311882989819
+      },
+      {
+        "name": "Relative_Compactness",
+        "value": 0.4724688117010181
+      }
+    ]
+  },
+  {
+    "step": 10,
+    "type": "SPLIT_DECISION",
+    "nodeId": "2",
+    "label": "Thr: 1.00",
+    "splitFeature": "Surface_Area"
+  },
+  {
+    "step": 11,
+    "type": "NODE_INIT",
+    "nodeId": "3",
+    "parentId": "2",
+    "depth": 3,
+    "samples": 41
+  },
+  {
+    "step": 12,
+    "type": "MAKE_LEAF",
+    "nodeId": "3",
+    "label": "Pred: 16.05"
+  },
+  {
+    "step": 13,
+    "type": "NODE_INIT",
+    "nodeId": "4",
+    "parentId": "2",
+    "depth": 3,
+    "samples": 106
+  },
+  {
+    "step": 14,
+    "type": "PILOT_RUN",
+    "nodeId": "4",
+    "pilotData": [
+      {
+        "name": "Surface_Area",
+        "value": 0.64
+      },
+      {
+        "name": "Relative_Compactness",
+        "value": 0.36
+      }
+    ]
+  },
+  {
+    "step": 15,
+    "type": "MAKE_LEAF",
+    "nodeId": "4",
+    "label": "Pred: 17.27"
+  },
+  {
+    "step": 16,
+    "type": "NODE_INIT",
+    "nodeId": "5",
+    "parentId": "1",
+    "depth": 2,
+    "samples": 140
+  },
+  {
+    "step": 17,
+    "type": "PILOT_RUN",
+    "nodeId": "5",
+    "pilotData": [
+      {
+        "name": "Relative_Compactness",
+        "value": 0.529302356275842
+      },
+      {
+        "name": "Surface_Area",
+        "value": 0.47069764372415807
+      }
+    ]
+  },
+  {
+    "step": 18,
+    "type": "SPLIT_DECISION",
+    "nodeId": "5",
+    "label": "Thr: -0.51",
+    "splitFeature": "Relative_Compactness"
+  },
+  {
+    "step": 19,
+    "type": "NODE_INIT",
+    "nodeId": "6",
+    "parentId": "5",
+    "depth": 3,
+    "samples": 103
+  },
+  {
+    "step": 20,
+    "type": "PILOT_RUN",
+    "nodeId": "6",
+    "pilotData": [
+      {
+        "name": "Surface_Area",
+        "value": 0.6
+      },
+      {
+        "name": "Relative_Compactness",
+        "value": 0.4
+      }
+    ]
+  },
+  {
+    "step": 21,
+    "type": "MAKE_LEAF",
+    "nodeId": "6",
+    "label": "Pred: 15.15"
+  },
+  {
+    "step": 22,
+    "type": "NODE_INIT",
+    "nodeId": "7",
+    "parentId": "5",
+    "depth": 3,
+    "samples": 37
+  },
+  {
+    "step": 23,
+    "type": "MAKE_LEAF",
+    "nodeId": "7",
+    "label": "Pred: 14.97"
+  },
+  {
+    "step": 24,
+    "type": "NODE_INIT",
+    "nodeId": "8",
+    "parentId": "0",
+    "depth": 1,
+    "samples": 265
+  },
+  {
+    "step": 25,
+    "type": "PILOT_RUN",
+    "nodeId": "8",
+    "pilotData": [
+      {
+        "name": "Surface_Area",
+        "value": 0.5170309110285447
+      },
+      {
+        "name": "Relative_Compactness",
+        "value": 0.4011084659875703
+      },
+      {
+        "name": "Roof_Area",
+        "value": 0.08186062298388494
+      },
+      {
+        "name": "Overall_Height",
+        "value": 0.0
+      }
+    ]
+  },
+  {
+    "step": 26,
+    "type": "MUTE_VARS",
+    "nodeId": "8",
+    "mutedVars": [
+      "Roof_Area",
+      "Overall_Height"
+    ]
+  },
+  {
+    "step": 27,
+    "type": "SPLIT_DECISION",
+    "nodeId": "8",
+    "label": "Thr: 0.53",
+    "splitFeature": "Relative_Compactness"
+  },
+  {
+    "step": 28,
+    "type": "NODE_INIT",
+    "nodeId": "9",
+    "parentId": "8",
+    "depth": 2,
+    "samples": 125
+  },
+  {
+    "step": 29,
+    "type": "PILOT_RUN",
+    "nodeId": "9",
+    "pilotData": [
+      {
+        "name": "Surface_Area",
+        "value": 0.5634219843745535
+      },
+      {
+        "name": "Relative_Compactness",
+        "value": 0.43657801562544646
+      }
+    ]
+  },
+  {
+    "step": 30,
+    "type": "SPLIT_DECISION",
+    "nodeId": "9",
+    "label": "Thr: -0.04",
+    "splitFeature": "Relative_Compactness"
+  },
+  {
+    "step": 31,
+    "type": "NODE_INIT",
+    "nodeId": "10",
+    "parentId": "9",
+    "depth": 3,
+    "samples": 36
+  },
+  {
+    "step": 32,
+    "type": "MAKE_LEAF",
+    "nodeId": "10",
+    "label": "Pred: 36.49"
+  },
+  {
+    "step": 33,
+    "type": "NODE_INIT",
+    "nodeId": "11",
+    "parentId": "9",
+    "depth": 3,
+    "samples": 89
+  },
+  {
+    "step": 34,
+    "type": "PILOT_RUN",
+    "nodeId": "11",
+    "pilotData": [
+      {
+        "name": "Surface_Area",
+        "value": 0.52
+      },
+      {
+        "name": "Relative_Compactness",
+        "value": 0.48
+      }
+    ]
+  },
+  {
+    "step": 35,
+    "type": "SPLIT_DECISION",
+    "nodeId": "11",
+    "label": "Thr: -0.67",
+    "splitFeature": "Surface_Area"
+  },
+  {
+    "step": 36,
+    "type": "NODE_INIT",
+    "nodeId": "12",
+    "parentId": "11",
+    "depth": 4,
+    "samples": 46
+  },
+  {
+    "step": 37,
+    "type": "MAKE_LEAF",
+    "nodeId": "12",
+    "label": "Pred: 27.65"
+  },
+  {
+    "step": 38,
+    "type": "NODE_INIT",
+    "nodeId": "13",
+    "parentId": "11",
+    "depth": 4,
+    "samples": 43
+  },
+  {
+    "step": 39,
+    "type": "MAKE_LEAF",
+    "nodeId": "13",
+    "label": "Pred: 41.14"
+  },
+  {
+    "step": 40,
+    "type": "NODE_INIT",
+    "nodeId": "14",
+    "parentId": "8",
+    "depth": 2,
+    "samples": 140
+  },
+  {
+    "step": 41,
+    "type": "PILOT_RUN",
+    "nodeId": "14",
+    "pilotData": [
+      {
+        "name": "Surface_Area",
+        "value": 0.5405859494261214
+      },
+      {
+        "name": "Relative_Compactness",
+        "value": 0.4594140505738787
+      }
+    ]
+  },
+  {
+    "step": 42,
+    "type": "SPLIT_DECISION",
+    "nodeId": "14",
+    "label": "Thr: 1.28",
+    "splitFeature": "Relative_Compactness"
+  },
+  {
+    "step": 43,
+    "type": "NODE_INIT",
+    "nodeId": "15",
+    "parentId": "14",
+    "depth": 3,
+    "samples": 97
+  },
+  {
+    "step": 44,
+    "type": "PILOT_RUN",
+    "nodeId": "15",
+    "pilotData": [
+      {
+        "name": "Relative_Compactness",
+        "value": 0.52
+      },
+      {
+        "name": "Surface_Area",
+        "value": 0.48
+      }
+    ]
+  },
+  {
+    "step": 45,
+    "type": "SPLIT_DECISION",
+    "nodeId": "15",
+    "label": "Thr: 0.91",
+    "splitFeature": "Relative_Compactness"
+  },
+  {
+    "step": 46,
+    "type": "NODE_INIT",
+    "nodeId": "16",
+    "parentId": "15",
+    "depth": 4,
+    "samples": 42
+  },
+  {
+    "step": 47,
+    "type": "MAKE_LEAF",
+    "nodeId": "16",
+    "label": "Pred: 30.35"
+  },
+  {
+    "step": 48,
+    "type": "NODE_INIT",
+    "nodeId": "17",
+    "parentId": "15",
+    "depth": 4,
+    "samples": 55
+  },
+  {
+    "step": 49,
+    "type": "MAKE_LEAF",
+    "nodeId": "17",
+    "label": "Pred: 32.97"
+  },
+  {
+    "step": 50,
+    "type": "NODE_INIT",
+    "nodeId": "18",
+    "parentId": "14",
+    "depth": 3,
+    "samples": 43
+  },
+  {
+    "step": 51,
+    "type": "MAKE_LEAF",
+    "nodeId": "18",
+    "label": "Pred: 28.41"
+  }
+]
